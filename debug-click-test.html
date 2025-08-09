@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>点击事件调试测试</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background: #f5f5f5;
+        }
+        .test-section {
+            background: white;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .test-button {
+            background: #007bff;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+            margin: 5px;
+        }
+        .test-button:hover {
+            background: #0056b3;
+        }
+        .status {
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 4px;
+        }
+        .success { background: #d4edda; color: #155724; }
+        .error { background: #f8d7da; color: #721c24; }
+        .info { background: #d1ecf1; color: #0c5460; }
+        #console-output {
+            background: #000;
+            color: #00ff00;
+            padding: 15px;
+            border-radius: 4px;
+            font-family: monospace;
+            max-height: 300px;
+            overflow-y: auto;
+            white-space: pre-wrap;
+        }
+        iframe {
+            width: 100%;
+            height: 600px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+    <h1>🐛 语言切换按钮点击事件调试</h1>
+    
+    <div class="test-section">
+        <h2>🎯 测试目标</h2>
+        <p>验证语言切换按钮的点击事件是否正常工作，特别是从俄语页面切换到英语的功能。</p>
+        
+        <div class="status info">
+            <strong>测试步骤：</strong><br>
+            1. 在下方iframe中加载俄语页面<br>
+            2. 点击语言切换按钮（🇷🇺 Русский）<br>
+            3. 选择 English 选项<br>
+            4. 观察控制台输出和页面跳转行为
+        </div>
+        
+        <button class="test-button" onclick="loadRussianPage()">加载俄语页面</button>
+        <button class="test-button" onclick="loadEnglishPage()">加载英语页面</button>
+        <button class="test-button" onclick="injectDebugScript()">注入调试脚本</button>
+        <button class="test-button" onclick="clearConsole()">清空控制台</button>
+    </div>
+
+    <div class="test-section">
+        <h2>📱 页面预览</h2>
+        <iframe id="test-iframe" src="about:blank"></iframe>
+    </div>
+
+    <div class="test-section">
+        <h2>🔍 调试控制台</h2>
+        <div id="console-output"></div>
+    </div>
+
+    <script>
+        let consoleOutput = document.getElementById('console-output');
+        let iframe = document.getElementById('test-iframe');
+        
+        function log(message, type = 'info') {
+            const timestamp = new Date().toLocaleTimeString();
+            const prefix = type === 'error' ? '[ERROR]' : type === 'success' ? '[SUCCESS]' : '[INFO]';
+            consoleOutput.textContent += `${timestamp} ${prefix} ${message}\n`;
+            consoleOutput.scrollTop = consoleOutput.scrollHeight;
+        }
+        
+        function clearConsole() {
+            consoleOutput.textContent = '';
+        }
+        
+        function loadRussianPage() {
+            log('🇷🇺 加载俄语页面...');
+            iframe.src = 'http://localhost:3003/ru';
+            
+            iframe.onload = function() {
+                log('✅ 俄语页面加载完成');
+                setTimeout(() => {
+                    injectDebugScript();
+                }, 1000);
+            };
+        }
+        
+        function loadEnglishPage() {
+            log('🇺🇸 加载英语页面...');
+            iframe.src = 'http://localhost:3003/';
+            
+            iframe.onload = function() {
+                log('✅ 英语页面加载完成');
+                setTimeout(() => {
+                    injectDebugScript();
+                }, 1000);
+            };
+        }
+        
+        function injectDebugScript() {
+            try {
+                const iframeDoc = iframe.contentDocument || iframe.contentWindow.document;
+                
+                // 创建调试脚本
+                const script = iframeDoc.createElement('script');
+                script.textContent = `
+                    console.log('🔧 调试脚本已注入');
+                    
+                    // 监听所有点击事件
+                    document.addEventListener('click', function(e) {
+                        console.log('🖱️ 点击事件:', {
+                            target: e.target.tagName,
+                            className: e.target.className,
+                            textContent: e.target.textContent?.trim(),
+                            ariaLabel: e.target.getAttribute('aria-label')
+                        });
+                        
+                        // 发送消息到父窗口
+                        window.parent.postMessage({
+                            type: 'click',
+                            target: e.target.tagName,
+                            className: e.target.className,
+                            textContent: e.target.textContent?.trim()
+                        }, '*');
+                    });
+                    
+                    // 查找语言切换按钮
+                    setTimeout(() => {
+                        const languageButtons = document.querySelectorAll('[aria-label*="language"], [aria-label*="Language"], [aria-label*="Язык"]');
+                        console.log('🔍 找到语言按钮数量:', languageButtons.length);
+                        
+                        languageButtons.forEach((btn, index) => {
+                            console.log('📍 语言按钮', index + 1, ':', {
+                                tagName: btn.tagName,
+                                className: btn.className,
+                                textContent: btn.textContent?.trim(),
+                                ariaLabel: btn.getAttribute('aria-label')
+                            });
+                            
+                            // 添加特殊的点击监听器
+                            btn.addEventListener('click', function(e) {
+                                console.log('🎯 语言按钮被点击!', {
+                                    button: index + 1,
+                                    event: e.type,
+                                    bubbles: e.bubbles,
+                                    cancelable: e.cancelable,
+                                    defaultPrevented: e.defaultPrevented
+                                });
+                                
+                                window.parent.postMessage({
+                                    type: 'language-button-click',
+                                    buttonIndex: index + 1
+                                }, '*');
+                            });
+                        });
+                        
+                        // 查找所有按钮
+                        const allButtons = document.querySelectorAll('button');
+                        console.log('🔍 页面总按钮数量:', allButtons.length);
+                        
+                        window.parent.postMessage({
+                            type: 'debug-info',
+                            languageButtonsCount: languageButtons.length,
+                            totalButtonsCount: allButtons.length
+                        }, '*');
+                    }, 500);
+                `;
+                
+                iframeDoc.head.appendChild(script);
+                log('✅ 调试脚本注入成功');
+                
+            } catch (error) {
+                log('❌ 调试脚本注入失败: ' + error.message, 'error');
+            }
+        }
+        
+        // 监听来自iframe的消息
+        window.addEventListener('message', function(event) {
+            if (event.data.type === 'click') {
+                log(`🖱️ iframe点击: ${event.data.target} - ${event.data.textContent}`);
+            } else if (event.data.type === 'language-button-click') {
+                log(`🎯 语言按钮${event.data.buttonIndex}被点击!`, 'success');
+            } else if (event.data.type === 'debug-info') {
+                log(`🔍 调试信息: 语言按钮${event.data.languageButtonsCount}个, 总按钮${event.data.totalButtonsCount}个`);
+            }
+        });
+        
+        // 页面加载时的初始化
+        window.onload = function() {
+            log('🚀 调试页面已加载');
+            log('📝 请点击"加载俄语页面"开始测试');
+        };
+    </script>
+</body>
+</html>

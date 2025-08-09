@@ -1,0 +1,633 @@
+{
+  "common": {
+    "title": "Image to ICO Converter",
+    "description": "Convert SVG, PNG, JPG files to ICO format with customizable settings",
+    "loading": "Loading...",
+    "error": "Error",
+    "success": "Success",
+    "download": "Download",
+    "preview": "Preview",
+    "reset": "Reset",
+    "convert": "Convert",
+    "selectFile": "Select File",
+    "dragDrop": "Drag & Drop",
+    "or": "or",
+    "browse": "Browse",
+    "language": "Language"
+  },
+  "navigation": {
+    "title": "Image to ICO",
+    "subtitle": "Professional Image to ICO Converter",
+    "home": "Home",
+    "converter": "Converter",
+    "features": "Features",
+    "guide": "Guide",
+    "faq": "FAQ",
+    "sponsor": "Sponsor"
+  },
+  "theme": {
+    "light": "Light",
+    "dark": "Dark",
+    "system": "System",
+    "toggle": "Toggle theme"
+  },
+  "header": {
+    "title": "Image to ICO",
+    "subtitle": "Professional Image to ICO Converter",
+    "github": "GitHub",
+    "sponsor": "Sponsor"
+  },
+  "footer": {
+    "brand": "Image to ICO Converter",
+    "description": "Professional online tool for converting SVG, PNG, JPG files to ICO format with advanced customization options.",
+    "quickLinks": "Quick Links",
+    "home": "Home",
+    "converter": "Converter",
+    "about": "About",
+    "contact": "Contact",
+    "resources": "Resources",
+    "documentation": "Documentation",
+    "apiReference": "API Reference",
+    "tutorials": "Tutorials",
+    "support": "Support",
+    "helpCenter": "Help Center",
+    "community": "Community",
+    "reportBug": "Report Bug",
+    "copyright": "© 2024 SVG to ICO Converter. All rights reserved.",
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Service",
+    "legal": {
+      "privacy": "Privacy Policy",
+      "terms": "Terms of Service"
+    },
+    "brand": {
+      "title": "Image to ICO",
+      "description": "Professional online tool for converting SVG, PNG, JPG files to ICO format with advanced customization options."
+    },
+    "sections": {
+      "quickLinks": "Quick Links",
+      "resources": "Resources",
+      "support": "Support Us"
+    },
+    "links": {
+      "features": "Features",
+      "guide": "How to Use",
+      "faq": "FAQ",
+      "privacy": "Privacy Policy"
+    },
+    "resources": {
+      "documentation": "Documentation",
+      "api": "API Reference",
+      "support": "Support",
+      "changelog": "Changelog"
+    },
+    "support": {
+      "description": "Help us improve this tool by supporting our development.",
+      "sponsor": "Sponsor Us"
+    },
+    "copyright": {
+      "text": "Image to ICO Converter. All rights reserved.",
+      "madeWith": "Made with",
+      "by": "by developers"
+    }
+  },
+  "hero": {
+    "badge": "Free Online Tool",
+    "title": "SVG to Favicon & ICO Converter Online",
+    "subtitle": "Professional SVG to ICO Converter with Multi-Format Support",
+    "description": "Transform your scalable vector graphics into high-quality favicon and icon files. Our advanced SVG to ICO converter supports multiple formats including PNG to ICO, JPG to ICO, and image to ICO conversion with customizable settings.",
+    "cta": {
+      "primary": "Start Converting",
+      "secondary": "Learn More"
+    }
+  },
+  "stats": {
+    "users": "Happy Users",
+    "conversions": "Files Converted",
+    "rating": "User Rating",
+    "availability": "Availability"
+  },
+  "features": {
+    "title": "Why Choose Our ICO Converter?",
+    "subtitle": "Professional-grade features for perfect ICO conversion",
+    "description": "Professional-grade features for perfect ICO conversion",
+    "fast": {
+      "title": "Lightning Fast",
+      "description": "Client-side processing ensures quick conversion and complete privacy"
+    },
+    "secure": {
+      "title": "100% Secure",
+      "description": "Your files never leave your browser. Complete privacy guaranteed."
+    },
+    "quality": {
+      "title": "High Quality",
+      "description": "Advanced algorithms ensure crisp, clear icons at all sizes"
+    }
+  },
+  "svgToFavicon": {
+    "title": "SVG to Favicon Converter",
+    "subtitle": "Create Perfect Favicons from SVG Files",
+    "description": "Convert your SVG files to favicon format with our specialized SVG to favicon converter. Generate high-quality favicons for websites with multiple sizes and formats.",
+    "features": {
+      "multiSize": {
+        "title": "Multi-Size Favicon Generation",
+        "description": "Generate favicons in all standard sizes: 16x16, 32x32, 48x48, and more"
+      },
+      "webOptimized": {
+        "title": "Web-Optimized Output",
+        "description": "Optimized for web browsers with perfect favicon compatibility"
+      },
+      "instantPreview": {
+        "title": "Instant Preview",
+        "description": "See how your favicon will look before downloading"
+      }
+    }
+  },
+  "multiFormatConverter": {
+    "title": "Multi-Format ICO Converter",
+    "subtitle": "Convert Any Image to ICO Format",
+    "description": "Our versatile image to ICO converter supports multiple input formats. Convert PNG to ICO, JPG to ICO, and other image formats to ICO with professional quality.",
+    "supportedFormats": {
+      "title": "Supported Input Formats",
+      "svg": "SVG to ICO - Vector graphics conversion",
+      "png": "PNG to ICO - Raster image conversion",
+      "jpg": "JPG to ICO - JPEG image conversion",
+      "gif": "GIF to ICO - Animated image conversion",
+      "bmp": "BMP to ICO - Bitmap conversion",
+      "webp": "WebP to ICO - Modern format conversion"
+    },
+    "benefits": {
+      "title": "Why Use Our ICO Convert Tool?",
+      "quality": "Maintains original image quality during conversion",
+      "batch": "Support for batch conversion of multiple files",
+      "sizes": "Generate multiple icon sizes in one ICO file",
+      "compatibility": "Perfect compatibility with Windows and web applications"
+    }
+  },
+  "guide": {
+    "title": "How It Works",
+    "description": "Simple 3-step process to convert your SVG files",
+    "step1": {
+      "title": "Upload Image",
+      "description": "Select or drag & drop your image file (SVG, PNG, JPG)"
+    },
+    "step2": {
+      "title": "Customize Settings",
+      "description": "Choose quality, background, and icon sizes"
+    },
+    "step3": {
+      "title": "Download ICO",
+      "description": "Get your converted ICO file instantly"
+    }
+  },
+  "faq": {
+    "title": "Frequently Asked Questions",
+    "description": "Everything you need to know about SVG to ICO conversion and favicon creation",
+    "q1": {
+      "question": "What is an ICO file?",
+      "answer": "ICO is a file format for computer icons in Microsoft Windows. ICO files contain one or more small images at multiple sizes and color depths, allowing for proper scaling."
+    },
+    "q2": {
+      "question": "What's the difference between SVG to ICO and SVG to favicon?",
+      "answer": "SVG to favicon specifically creates web-optimized icons for websites, while SVG to ICO creates general-purpose icon files. Our converter handles both formats perfectly."
+    },
+    "q3": {
+      "question": "Can I convert PNG to ICO or JPG to ICO?",
+      "answer": "Yes! Our multi-format ICO converter supports PNG to ICO, JPG to ICO, and many other image formats. Simply upload your image and convert to ICO format."
+    },
+    "q4": {
+      "question": "What SVG features are supported?",
+      "answer": "Our converter supports most SVG features including paths, shapes, gradients, and text. Complex animations and interactive elements may not be preserved."
+    },
+    "q5": {
+      "question": "Is my data secure?",
+      "answer": "Yes! All conversion happens in your browser. Your files never leave your device, ensuring complete privacy and security."
+    },
+    "q6": {
+      "question": "What sizes should I choose for ICO conversion?",
+      "answer": "For general use, we recommend the multi-size option (16x16, 32x32, 48x48) which covers most common applications and display scenarios."
+    },
+    "q7": {
+      "question": "How do I use the converted ICO files?",
+      "answer": "ICO files can be used as application icons, website favicons, or desktop shortcuts. They're compatible with Windows applications and web browsers."
+    },
+    "q8": {
+      "question": "What's the best format to convert to ICO?",
+      "answer": "SVG files are ideal for ICO conversion as they maintain quality at all sizes. However, our image to ICO converter works well with PNG, JPG, and other formats too."
+    }
+  },
+  "converter": {
+    "title": "Convert Images to ICO",
+    "subtitle": "Upload your image file (SVG, PNG, JPG) and customize the conversion settings",
+    "upload": {
+      "title": "Upload Image File",
+      "dragDrop": "Drag and drop your image file here",
+      "or": "or",
+      "browse": "Browse Files",
+      "supported": "Supported formats: SVG, PNG, JPG",
+      "maxSize": "Maximum file size: 10MB",
+      "selected": "Selected file:",
+      "error": "Error uploading file",
+      "invalidType": "Please select a valid image file (SVG, PNG, JPG)",
+      "tooLarge": "File size exceeds 10MB limit"
+    },
+    "settings": {
+      "title": "Conversion Settings",
+      "quality": {
+        "title": "Quality",
+        "high": "High Quality",
+        "highDesc": "Best quality, larger file size",
+        "medium": "Medium Quality",
+        "mediumDesc": "Balanced quality and file size",
+        "low": "Low Quality",
+        "lowDesc": "Smaller file size, lower quality"
+      },
+      "background": {
+        "title": "Background",
+        "transparent": "Transparent",
+        "white": "White",
+        "black": "Black",
+        "custom": "Custom",
+        "customColor": "Custom Color"
+      },
+      "sizes": {
+        "title": "Icon Sizes",
+        "small": "Small icon for taskbar",
+        "medium": "Medium icon for desktop",
+        "large": "Large icon for high-DPI displays",
+        "multi": "Multi-size (Recommended)",
+        "multiDesc": "Includes common sizes for all uses",
+        "all": "All Sizes",
+        "allDesc": "Complete set of all standard sizes",
+        "selected": "Selected sizes"
+      },
+      "summary": {
+        "title": "Settings Summary"
+      }
+    },
+    "progress": {
+      "title": "Converting...",
+      "subtitle": "Please wait while we process your image",
+      "preparing": "Preparing conversion",
+      "processing": "Processing SVG",
+      "generating": "Generating ICO",
+      "finalizing": "Finalizing",
+      "complete": "Conversion complete",
+      "reading": "Reading file",
+      "readingDesc": "Loading and analyzing your image file",
+      "processingDesc": "Converting image data and applying settings",
+      "generatingDesc": "Creating ICO file with selected sizes",
+      "step": "Step",
+      "tip": "Tip: Larger files may take a few moments to process"
+    },
+    "result": {
+      "title": "Conversion Complete!",
+      "subtitle": "Your ICO file is ready for download",
+      "success": "Conversion Complete!",
+      "successDesc": "Your SVG file has been successfully converted to ICO format.",
+      "download": "Download ICO",
+      "preview": "Preview",
+      "newConversion": "Convert Another File",
+      "convertAnother": "Convert Another File",
+      "convertedAt": "Converted at",
+      "fileInfo": "File Information",
+      "filename": "Filename",
+      "filesize": "File Size",
+      "dimensions": "Dimensions",
+      "format": "Format",
+      "created": "Created",
+      "tips": {
+        "title": "Tips for Using ICO Files",
+        "tip1": "ICO files work best for Windows applications and websites",
+        "tip2": "Multiple sizes in one file ensure compatibility across different displays",
+        "tip3": "Use transparent backgrounds for better integration with various themes"
+      }
+    },
+    "error": {
+      "title": "Conversion Failed",
+      "subtitle": "An error occurred during conversion",
+      "retry": "Try Again",
+      "selectNew": "Select New File"
+    },
+    "common": {
+      "invalidFile": "Invalid file format",
+      "fileTooBig": "File size too large",
+      "processingError": "Error processing file",
+      "networkError": "Network error occurred",
+      "browse": "Browse Files",
+      "upload": "Upload SVG File",
+      "or": "or",
+      "clickToBrowse": "click to browse"
+    },
+    "placeholder": {
+      "title": "Convert SVG to ICO",
+      "description": "Upload your SVG files and convert them to ICO format instantly"
+    },
+    "guide": {
+    "title": "How to Convert SVG to ICO",
+    "description": "Simple 3-step process to convert your SVG files",
+    "step1": {
+        "title": "Upload SVG Files",
+        "description": "Drag and drop your SVG files or click to browse"
+      },
+      "step2": {
+        "title": "Choose Settings",
+        "description": "Select your preferred ICO size and quality"
+      },
+      "step3": {
+        "title": "Download ICO",
+        "description": "Click convert and download your ICO files"
+      }
+    },
+    "dropzone": {
+      "title": "Drop your SVG files here",
+      "subtitle": "or click to browse",
+      "supportedFormats": "Supported formats: SVG"
+    },
+    "actions": {
+      "convert": "Convert to ICO",
+      "convertDesc": "Start the conversion process",
+      "convertAnother": "Convert Another File",
+      "download": "Download",
+      "preview": "Preview"
+    }
+  },
+  "common": {
+    "title": "SVG to ICO Converter",
+    "description": "Convert SVG files to ICO format with customizable settings",
+    "loading": "Loading...",
+    "error": "Error",
+    "success": "Success",
+    "download": "Download",
+    "preview": "Preview",
+    "reset": "Reset",
+    "convert": "Convert",
+    "selectFile": "Select File",
+    "dragDrop": "Drag & Drop",
+    "or": "or",
+    "browse": "Browse",
+    "language": "Language",
+    "learnMore": "Learn More"
+  },
+  "home": {
+    "hero": {
+        "title": "Convert Images to ICO Online",
+        "subtitle": "Professional online tool for converting images to ICO format",
+        "description": "Transform your SVG, PNG, JPG images into high-quality icon files with our professional conversion tool. Support for multiple sizes, custom backgrounds, and optimized output.",
+      "cta": "Start Converting",
+      "features": "Key Features"
+    },
+    "stats": {
+      "conversions": "Files Converted",
+      "users": "Happy Users",
+      "formats": "Output Formats",
+      "uptime": "Uptime"
+    },
+    "features": {
+      "title": "Why Choose Our Converter?",
+      "subtitle": "Professional-grade features for perfect ICO conversion",
+      "highQuality": {
+        "title": "High Quality Output",
+        "description": "Advanced algorithms ensure crisp, clear icons at all sizes"
+      },
+      "multipleFormats": {
+        "title": "Multiple Sizes",
+        "description": "Generate ICO files with multiple embedded sizes for all use cases"
+      },
+      "customization": {
+        "title": "Full Customization",
+        "description": "Control quality, background, and sizes to match your needs"
+      },
+      "fastProcessing": {
+        "title": "Lightning Fast",
+        "description": "Client-side processing ensures quick conversion and privacy"
+      },
+      "noWatermark": {
+        "title": "No Watermarks",
+        "description": "Clean output files without any branding or watermarks"
+      },
+      "freeToUse": {
+        "title": "Completely Free",
+        "description": "No registration, no limits, no hidden costs"
+      }
+    },
+    "howItWorks": {
+      "title": "How It Works",
+      "subtitle": "Simple 3-step process to convert your SVG files",
+      "step1": {
+        "title": "Upload SVG",
+        "description": "Select or drag & drop your SVG file"
+      },
+      "step2": {
+        "title": "Customize Settings",
+        "description": "Choose quality, background, and icon sizes"
+      },
+      "step3": {
+        "title": "Download ICO",
+        "description": "Get your converted ICO file instantly"
+      }
+    },
+    "faq": {
+    "title": "Frequently Asked Questions",
+    "description": "Find answers to common questions about SVG to ICO conversion",
+    "q1": {
+        "question": "What is an ICO file?",
+        "answer": "ICO is a file format for computer icons in Microsoft Windows. ICO files contain one or more small images at multiple sizes and color depths, allowing for proper scaling."
+      },
+      "q2": {
+        "question": "What SVG features are supported?",
+        "answer": "Our converter supports most SVG features including paths, shapes, gradients, and text. Complex animations and interactive elements may not be preserved."
+      },
+      "q3": {
+        "question": "Is my data secure?",
+        "answer": "Yes! All conversion happens in your browser. Your files never leave your device, ensuring complete privacy and security."
+      },
+      "q4": {
+        "question": "What sizes should I choose?",
+        "answer": "For general use, we recommend the multi-size option (16x16, 32x32, 48x48) which covers most common applications and display scenarios."
+      },
+      "q5": {
+        "question": "Can I convert SVG to Favicon?",
+        "answer": "Yes! Our SVG to ICO converter is perfect for creating favicons. Simply convert your SVG to ICO format and use it as your website's favicon."
+      },
+      "q6": {
+        "question": "What's the difference between ICO and other image formats?",
+        "answer": "ICO files can contain multiple image sizes in one file, making them ideal for icons that need to display well at different scales. This is especially important for favicons and application icons."
+      }
+    },
+    "svgToFavicon": {
+      "title": "SVG to Favicon Converter",
+      "subtitle": "Create Perfect Favicons from SVG Files",
+      "description": "Transform your SVG graphics into professional favicons with our specialized converter. Generate multi-size ICO files optimized for web browsers and applications.",
+      "features": {
+        "webOptimized": {
+          "title": "Web-Optimized Output",
+          "description": "Generate favicons optimized for all browsers and devices"
+        },
+        "multiSize": {
+          "title": "Multiple Sizes",
+          "description": "Create ICO files with 16x16, 32x32, and 48x48 sizes in one file"
+        },
+        "transparent": {
+          "title": "Transparent Backgrounds",
+          "description": "Maintain transparency for seamless integration with any website theme"
+        }
+      }
+    },
+    "multiFormatConverter": {
+      "title": "Multi-Format ICO Converter",
+      "subtitle": "Convert Any Image to ICO Format",
+      "description": "Our versatile converter supports multiple input formats, making it easy to create ICO files from any image source.",
+      "supportedFormats": {
+        "svg": "SVG to ICO - Perfect for scalable vector graphics",
+        "png": "PNG to ICO - Ideal for images with transparency",
+        "jpg": "JPG to ICO - Great for photographic content",
+        "gif": "GIF to ICO - Convert animated or static GIFs"
+      }
+    },
+    "bestPractices": {
+      "title": "Best Practices for Image to ICO Conversion",
+      "subtitle": "Expert Tips for Perfect ICO Files",
+      "preparation": {
+        "title": "Image Preparation",
+        "tip1": "Use high-resolution source images for best results",
+        "tip2": "Ensure square aspect ratios for optimal icon appearance",
+        "tip3": "Keep designs simple and recognizable at small sizes"
+      },
+      "sizing": {
+        "title": "Size Selection",
+        "tip1": "16x16 for system tray and small UI elements",
+        "tip2": "32x32 for desktop shortcuts and file associations",
+        "tip3": "48x48+ for modern high-DPI displays"
+      },
+      "optimization": {
+        "title": "Quality Optimization",
+        "tip1": "Use transparent backgrounds when possible",
+        "tip2": "Test icons at different sizes before finalizing",
+        "tip3": "Consider color contrast for accessibility"
+      }
+    },
+    "comparison": {
+      "title": "ICO Converter Features Comparison",
+      "subtitle": "Why Our ICO Convert Tool Stands Out",
+      "inputFormats": {
+        "title": "Supported Input Formats",
+        "our": "SVG, PNG, JPG, GIF, BMP, WebP",
+        "others": "Limited format support"
+      },
+      "outputQuality": {
+        "title": "Output Quality",
+        "our": "Professional-grade with advanced algorithms",
+        "others": "Basic conversion quality"
+      },
+      "privacy": {
+        "title": "Privacy & Security",
+        "our": "100% client-side processing",
+        "others": "Files uploaded to servers"
+      },
+      "speed": {
+        "title": "Conversion Speed",
+        "our": "Instant processing",
+        "others": "Slow server-based conversion"
+      },
+      "cost": {
+        "title": "Pricing",
+        "our": "Completely free",
+        "others": "Subscription or per-use fees"
+      },
+      "customization": {
+        "title": "Customization Options",
+        "our": "Full control over sizes, quality, and backgrounds",
+        "others": "Limited customization"
+      }
+    }
+  },
+  "privacy": {
+    "title": "Privacy Policy",
+    "lastUpdated": "Last updated: January 2024",
+    "backToHome": "Back to Home",
+    "overview": {
+      "title": "Overview",
+      "content": "This Privacy Policy describes how we collect, use, and protect your information when you use our Image to ICO converter service. We are committed to protecting your privacy and ensuring the security of your data."
+    },
+    "dataCollection": {
+      "title": "Information We Collect",
+      "content": "We collect minimal information to provide our service:",
+      "item1": "Technical information such as browser type and device information for service optimization",
+      "item2": "Usage statistics to improve our service (anonymized and aggregated)",
+      "item3": "No personal files or converted images are stored on our servers"
+    },
+    "dataUsage": {
+      "title": "How We Use Your Information",
+      "content": "All image processing happens directly in your browser. Your files never leave your device, ensuring complete privacy. We use collected information solely to improve our service and provide technical support."
+    },
+    "dataSecurity": {
+      "title": "Data Security",
+      "content": "We implement industry-standard security measures to protect any information we collect. Since all conversion happens client-side, your files remain completely private and secure on your device."
+    },
+    "thirdParty": {
+      "title": "Third-Party Services",
+      "content": "We may use third-party analytics services to understand how our service is used. These services collect only anonymized, aggregated data and do not have access to your files or personal information."
+    },
+    "userRights": {
+      "title": "Your Rights",
+      "content": "You have the right to know what information we collect, request deletion of any data we may have, and opt-out of analytics tracking. Since we don't store personal files, most data remains entirely under your control."
+    },
+    "contact": {
+      "title": "Contact Us",
+      "content": "If you have any questions about this Privacy Policy or our practices, please contact us at 0992sunshine@gmail.com. We will respond to your inquiries promptly."
+    }
+  },
+  "terms": {
+    "title": "Terms of Service",
+    "lastUpdated": "Last updated: January 2024",
+    "backToHome": "Back to Home",
+    "acceptance": {
+      "title": "Acceptance of Terms",
+      "content": "By using our Image to ICO converter service, you agree to be bound by these Terms of Service. If you do not agree to these terms, please do not use our service."
+    },
+    "serviceDescription": {
+      "title": "Service Description",
+      "content": "Our service provides online image to ICO conversion capabilities. The service includes:",
+      "item1": "Converting SVG, PNG, JPG, and other image formats to ICO format",
+      "item2": "Customizable output settings including size, quality, and background options",
+      "item3": "Client-side processing ensuring privacy and security of your files"
+    },
+    "userResponsibilities": {
+      "title": "User Responsibilities",
+      "content": "When using our service, you agree to:",
+      "item1": "Use the service only for lawful purposes and in accordance with these terms",
+      "item2": "Not upload files that infringe on intellectual property rights of others",
+      "item3": "Not attempt to reverse engineer, modify, or interfere with the service",
+      "item4": "Take full responsibility for the content and legality of files you process"
+    },
+    "disclaimer": {
+      "title": "Disclaimer of Warranties",
+      "content": "Our service is provided 'as is' without any warranties, express or implied. We do not guarantee that the service will be uninterrupted, error-free, or meet your specific requirements. You use the service at your own risk."
+    },
+    "limitation": {
+      "title": "Limitation of Liability",
+      "content": "To the maximum extent permitted by law, we shall not be liable for any indirect, incidental, special, or consequential damages arising from your use of the service. Our total liability shall not exceed the amount you paid for the service (which is zero for our free service)."
+    },
+    "intellectualProperty": {
+      "title": "Intellectual Property",
+      "content": "You retain all rights to the files you upload and convert. We claim no ownership over your content. You are responsible for ensuring you have the right to use and convert any files you upload to our service."
+    },
+    "serviceChanges": {
+      "title": "Service Modifications",
+      "content": "We reserve the right to modify, suspend, or discontinue the service at any time without notice. We may also update these terms periodically, and continued use of the service constitutes acceptance of any changes."
+    },
+    "termination": {
+      "title": "Termination",
+      "content": "We may terminate or restrict your access to the service at any time for any reason, including violation of these terms. You may stop using the service at any time."
+    },
+    "governingLaw": {
+      "title": "Governing Law",
+      "content": "These terms are governed by and construed in accordance with applicable laws. Any disputes arising from these terms or your use of the service will be resolved through appropriate legal channels."
+    },
+    "contact": {
+      "title": "Contact Information",
+      "content": "If you have any questions about these Terms of Service, please contact us at 0992sunshine@gmail.com. We will address your concerns promptly and professionally."
+    }
+  }
+}

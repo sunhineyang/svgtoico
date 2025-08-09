@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>语言切换功能测试</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            background: #f5f5f5;
+            line-height: 1.6;
+        }
+        .test-container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        .test-button {
+            background: #007bff;
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            margin: 8px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background 0.3s;
+        }
+        .test-button:hover {
+            background: #0056b3;
+        }
+        .test-button.success {
+            background: #28a745;
+        }
+        .test-button.warning {
+            background: #ffc107;
+            color: #212529;
+        }
+        .instructions {
+            background: #e3f2fd;
+            border-left: 4px solid #2196f3;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 5px;
+        }
+        .step {
+            background: #f8f9fa;
+            border: 1px solid #dee2e6;
+            padding: 15px;
+            margin: 10px 0;
+            border-radius: 5px;
+            border-left: 4px solid #007bff;
+        }
+        .result {
+            background: #d4edda;
+            border: 1px solid #c3e6cb;
+            color: #155724;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 5px;
+            border-left: 4px solid #28a745;
+        }
+        .error {
+            background: #f8d7da;
+            border: 1px solid #f5c6cb;
+            color: #721c24;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 5px;
+            border-left: 4px solid #dc3545;
+        }
+        .iframe-container {
+            border: 2px solid #dee2e6;
+            border-radius: 8px;
+            margin: 20px 0;
+            overflow: hidden;
+        }
+        iframe {
+            width: 100%;
+            height: 700px;
+            border: none;
+        }
+        .highlight {
+            background: #fff3cd;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="test-container">
+        <h1>🔄 语言切换功能测试</h1>
+        
+        <div class="instructions">
+            <h3>📋 测试说明</h3>
+            <p><strong>问题描述：</strong>用户反馈从英文切换到俄语可以正常工作，但从俄语切换回英文不工作。</p>
+            <p><strong>测试目标：</strong>验证双向语言切换功能是否正常。</p>
+        </div>
+        
+        <div class="test-controls">
+            <button class="test-button" onclick="loadRussianPage()">🇷🇺 加载俄语页面</button>
+            <button class="test-button" onclick="loadEnglishPage()">🇺🇸 加载英语页面</button>
+            <button class="test-button warning" onclick="openConsole()">🔍 打开浏览器控制台</button>
+        </div>
+        
+        <div class="step">
+            <h4>🔧 已修复的问题：</h4>
+            <ul>
+                <li>✅ 改进了URL构建逻辑，使用完整的URL格式</li>
+                <li>✅ 移除了延迟跳转，改为立即执行</li>
+                <li>✅ 增加了详细的调试日志</li>
+                <li>✅ 添加了备用跳转方案</li>
+            </ul>
+        </div>
+        
+        <div class="step">
+            <h4>📝 测试步骤：</h4>
+            <ol>
+                <li>点击 <span class="highlight">"🇷🇺 加载俄语页面"</span> 按钮</li>
+                <li>在俄语页面中找到右上角的语言切换按钮（🇷🇺 图标）</li>
+                <li>点击语言切换按钮，会出现下拉菜单</li>
+                <li>选择 <span class="highlight">"🇺🇸 English"</span> 选项</li>
+                <li>观察页面是否成功切换到英语版本</li>
+                <li>然后测试反向切换：从英语切换回俄语</li>
+            </ol>
+        </div>
+        
+        <div class="result" id="testResult" style="display: none;">
+            <h4>✅ 测试结果</h4>
+            <p id="resultText"></p>
+        </div>
+        
+        <div class="iframe-container">
+            <iframe id="testFrame" src="http://localhost:3003/ru"></iframe>
+        </div>
+        
+        <div class="step">
+            <h4>🔍 调试信息：</h4>
+            <p>如果语言切换仍然不工作，请：</p>
+            <ul>
+                <li>打开浏览器控制台（F12），查看是否有错误信息</li>
+                <li>观察控制台中的语言切换日志</li>
+                <li>检查网络请求是否正常</li>
+                <li>确认页面URL是否正确变化</li>
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        let testFrame = document.getElementById('testFrame');
+        let testResult = document.getElementById('testResult');
+        let resultText = document.getElementById('resultText');
+        
+        function showResult(message, isSuccess = true) {
+            resultText.textContent = message;
+            testResult.style.display = 'block';
+            if (!isSuccess) {
+                testResult.className = 'error';
+            } else {
+                testResult.className = 'result';
+            }
+        }
+        
+        function loadRussianPage() {
+            console.log('🔄 加载俄语页面...');
+            testFrame.src = 'http://localhost:3003/ru';
+            showResult('俄语页面已加载，请在页面中测试语言切换功能');
+        }
+        
+        function loadEnglishPage() {
+            console.log('🔄 加载英语页面...');
+            testFrame.src = 'http://localhost:3003/';
+            showResult('英语页面已加载，请在页面中测试语言切换功能');
+        }
+        
+        function openConsole() {
+            alert('请按 F12 键打开浏览器开发者工具，然后查看 Console 标签页中的日志信息。');
+        }
+        
+        // 页面加载完成后的说明
+        window.onload = function() {
+            console.log('🎯 语言切换测试页面已准备就绪');
+            console.log('📋 请按照页面上的步骤进行测试');
+            showResult('测试页面已准备就绪，请按照上方步骤进行语言切换测试');
+        };
+        
+        // 监听iframe加载事件
+        testFrame.onload = function() {
+            try {
+                const currentUrl = testFrame.src;
+                console.log('📍 当前iframe URL:', currentUrl);
+                
+                if (currentUrl.includes('/ru')) {
+                    console.log('✅ 俄语页面加载完成');
+                } else if (currentUrl === 'http://localhost:3003/') {
+                    console.log('✅ 英语页面加载完成');
+                }
+            } catch (e) {
+                console.log('⚠️ 无法检测iframe URL（正常现象）');
+            }
+        };
+    </script>
+</body>
+</html>

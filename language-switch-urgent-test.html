@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>紧急语言切换测试</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background: #f5f5f5;
+        }
+        .test-section {
+            background: white;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .test-button {
+            background: #007bff;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+            margin: 5px;
+        }
+        .test-button:hover {
+            background: #0056b3;
+        }
+        .status {
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 4px;
+        }
+        .success { background: #d4edda; color: #155724; }
+        .error { background: #f8d7da; color: #721c24; }
+        .info { background: #d1ecf1; color: #0c5460; }
+        #console-output {
+            background: #000;
+            color: #00ff00;
+            padding: 15px;
+            border-radius: 4px;
+            font-family: monospace;
+            max-height: 300px;
+            overflow-y: auto;
+            white-space: pre-wrap;
+        }
+    </style>
+</head>
+<body>
+    <h1>🚨 紧急语言切换功能测试</h1>
+    
+    <div class="test-section">
+        <h2>📍 当前状态检查</h2>
+        <div id="current-status"></div>
+        <button class="test-button" onclick="checkCurrentStatus()">检查当前页面状态</button>
+    </div>
+
+    <div class="test-section">
+        <h2>🔄 语言切换测试</h2>
+        <p><strong>测试步骤：</strong></p>
+        <ol>
+            <li>打开俄语页面：<a href="http://localhost:3003/ru" target="_blank">http://localhost:3003/ru</a></li>
+            <li>在俄语页面点击语言切换按钮</li>
+            <li>选择 "English" 选项</li>
+            <li>检查是否跳转到根域名：<code>http://localhost:3003/</code></li>
+        </ol>
+        
+        <div class="status info">
+            <strong>⚠️ 重要提示：</strong><br>
+            - 如果点击语言切换按钮没有反应，说明事件绑定有问题<br>
+            - 如果点击后没有跳转，说明跳转逻辑有问题<br>
+            - 如果跳转到错误的URL，说明URL构建逻辑有问题
+        </div>
+        
+        <button class="test-button" onclick="testLanguageSwitch()">开始测试语言切换</button>
+        <button class="test-button" onclick="openRussianPage()">打开俄语页面</button>
+        <button class="test-button" onclick="openEnglishPage()">打开英语页面</button>
+    </div>
+
+    <div class="test-section">
+        <h2>🐛 调试信息</h2>
+        <button class="test-button" onclick="clearConsole()">清空控制台</button>
+        <button class="test-button" onclick="captureConsole()">捕获控制台输出</button>
+        <div id="console-output"></div>
+    </div>
+
+    <script>
+        let consoleOutput = document.getElementById('console-output');
+        let originalConsoleLog = console.log;
+        let originalConsoleError = console.error;
+        
+        // 捕获控制台输出
+        function captureConsole() {
+            console.log = function(...args) {
+                originalConsoleLog.apply(console, args);
+                consoleOutput.textContent += '[LOG] ' + args.join(' ') + '\n';
+                consoleOutput.scrollTop = consoleOutput.scrollHeight;
+            };
+            
+            console.error = function(...args) {
+                originalConsoleError.apply(console, args);
+                consoleOutput.textContent += '[ERROR] ' + args.join(' ') + '\n';
+                consoleOutput.scrollTop = consoleOutput.scrollHeight;
+            };
+            
+            consoleOutput.textContent += '[INFO] 控制台捕获已启动\n';
+        }
+        
+        function clearConsole() {
+            consoleOutput.textContent = '';
+        }
+        
+        function checkCurrentStatus() {
+            const statusDiv = document.getElementById('current-status');
+            const currentUrl = window.location.href;
+            const isRussian = currentUrl.includes('/ru');
+            const isEnglish = !currentUrl.includes('/ru') && !currentUrl.includes('/en');
+            
+            let status = `
+                <div class="status info">
+                    <strong>当前URL：</strong> ${currentUrl}<br>
+                    <strong>检测语言：</strong> ${isRussian ? '俄语 🇷🇺' : isEnglish ? '英语 🇺🇸' : '未知'}<br>
+                    <strong>时间：</strong> ${new Date().toLocaleString()}
+                </div>
+            `;
+            
+            statusDiv.innerHTML = status;
+        }
+        
+        function testLanguageSwitch() {
+            alert('请按照以下步骤测试：\n\n1. 点击"打开俄语页面"按钮\n2. 在俄语页面找到语言切换按钮（通常在右上角）\n3. 点击语言切换按钮\n4. 选择"English"选项\n5. 检查是否跳转到根域名');
+        }
+        
+        function openRussianPage() {
+            console.log('🇷🇺 打开俄语页面');
+            window.open('http://localhost:3003/ru', '_blank');
+        }
+        
+        function openEnglishPage() {
+            console.log('🇺🇸 打开英语页面');
+            window.open('http://localhost:3003/', '_blank');
+        }
+        
+        // 页面加载时自动检查状态
+        window.onload = function() {
+            checkCurrentStatus();
+            captureConsole();
+            console.log('🚀 语言切换测试页面已加载');
+        };
+    </script>
+</body>
+</html>

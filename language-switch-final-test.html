@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🔄 语言切换最终测试</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            min-height: 100vh;
+        }
+        .container {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 30px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 2.5em;
+        }
+        .test-section {
+            margin: 20px 0;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        .test-button {
+            background: linear-gradient(45deg, #ff6b6b, #ee5a24);
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            border-radius: 25px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: bold;
+            margin: 10px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+        .test-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+        }
+        .status {
+            padding: 15px;
+            border-radius: 10px;
+            margin: 15px 0;
+            font-weight: bold;
+        }
+        .success {
+            background: rgba(46, 204, 113, 0.2);
+            border: 1px solid #2ecc71;
+            color: #2ecc71;
+        }
+        .error {
+            background: rgba(231, 76, 60, 0.2);
+            border: 1px solid #e74c3c;
+            color: #e74c3c;
+        }
+        .info {
+            background: rgba(52, 152, 219, 0.2);
+            border: 1px solid #3498db;
+            color: #3498db;
+        }
+        .warning {
+            background: rgba(241, 196, 15, 0.2);
+            border: 1px solid #f1c40f;
+            color: #f1c40f;
+        }
+        iframe {
+            width: 100%;
+            height: 600px;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            border-radius: 15px;
+            background: white;
+        }
+        .test-results {
+            margin-top: 20px;
+        }
+        .requirement {
+            background: rgba(155, 89, 182, 0.2);
+            border: 1px solid #9b59b6;
+            color: #9b59b6;
+            padding: 15px;
+            border-radius: 10px;
+            margin: 15px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🔄 语言切换最终测试</h1>
+        
+        <div class="requirement">
+            <h3>📋 用户要求验证：</h3>
+            <ul>
+                <li>✅ 网站打开默认就是英语，不要 /en 后缀</li>
+                <li>✅ 切换成英语时回到网站本身的域名（根路径 /）</li>
+                <li>✅ 只有俄语使用 /ru 路径</li>
+            </ul>
+        </div>
+
+        <div class="test-section">
+            <h3>🧪 测试步骤</h3>
+            <button class="test-button" onclick="loadEnglishPage()">🇺🇸 1. 测试英语页面（根域名）</button>
+            <button class="test-button" onclick="loadRussianPage()">🇷🇺 2. 测试俄语页面（/ru）</button>
+            <button class="test-button" onclick="testLanguageSwitch()">🔄 3. 测试语言切换功能</button>
+        </div>
+
+        <div id="status" class="status info">
+            <strong>状态：</strong>准备开始测试
+        </div>
+
+        <div class="test-section">
+            <h3>📱 实时预览</h3>
+            <iframe id="testFrame" src="about:blank"></iframe>
+        </div>
+
+        <div class="test-results">
+            <h3>📊 测试结果</h3>
+            <div id="results"></div>
+        </div>
+    </div>
+
+    <script>
+        const baseUrl = 'http://localhost:3003';
+        const testFrame = document.getElementById('testFrame');
+        const statusDiv = document.getElementById('status');
+        const resultsDiv = document.getElementById('results');
+
+        function updateStatus(message, type = 'info') {
+            statusDiv.className = `status ${type}`;
+            statusDiv.innerHTML = `<strong>状态：</strong>${message}`;
+            console.log(`[${type.toUpperCase()}] ${message}`);
+        }
+
+        function addResult(message, type = 'info') {
+            const resultDiv = document.createElement('div');
+            resultDiv.className = `status ${type}`;
+            resultDiv.innerHTML = message;
+            resultsDiv.appendChild(resultDiv);
+        }
+
+        function loadEnglishPage() {
+            updateStatus('🇺🇸 加载英语页面（根域名）...', 'info');
+            testFrame.src = baseUrl + '/';
+            
+            setTimeout(() => {
+                addResult('✅ 英语页面加载完成 - 根域名: ' + baseUrl + '/', 'success');
+                updateStatus('✅ 英语页面已加载，请检查是否显示英语内容', 'success');
+            }, 2000);
+        }
+
+        function loadRussianPage() {
+            updateStatus('🇷🇺 加载俄语页面（/ru）...', 'info');
+            testFrame.src = baseUrl + '/ru';
+            
+            setTimeout(() => {
+                addResult('✅ 俄语页面加载完成 - /ru 路径: ' + baseUrl + '/ru', 'success');
+                updateStatus('✅ 俄语页面已加载，请检查是否显示俄语内容', 'success');
+            }, 2000);
+        }
+
+        function testLanguageSwitch() {
+            updateStatus('🔄 开始测试语言切换功能...', 'info');
+            
+            // 先加载英语页面
+            testFrame.src = baseUrl + '/';
+            
+            setTimeout(() => {
+                addResult('📍 步骤1: 加载英语页面（根域名）', 'info');
+                updateStatus('📍 请在页面中点击语言切换按钮测试功能', 'warning');
+                
+                setTimeout(() => {
+                    addResult('🔄 请手动测试：<br/>1. 在英语页面点击俄语切换 → 应跳转到 /ru<br/>2. 在俄语页面点击英语切换 → 应跳转到根域名 /', 'warning');
+                }, 1000);
+            }, 2000);
+        }
+
+        // 页面加载完成后的初始化
+        window.onload = function() {
+            updateStatus('🚀 测试工具已准备就绪，请开始测试', 'success');
+            addResult('🎯 测试目标：验证语言切换功能符合用户要求', 'info');
+        };
+
+        // 监听iframe加载事件
+        testFrame.onload = function() {
+            try {
+                const currentUrl = testFrame.contentWindow.location.href;
+                console.log('📍 当前iframe URL:', currentUrl);
+                
+                if (currentUrl === baseUrl + '/') {
+                    console.log('✅ 英语页面加载完成（根域名）');
+                } else if (currentUrl === baseUrl + '/ru') {
+                    console.log('✅ 俄语页面加载完成（/ru）');
+                }
+            } catch (e) {
+                console.log('⚠️ 无法检测iframe URL（正常现象）');
+            }
+        };
+    </script>
+</body>
+</html>

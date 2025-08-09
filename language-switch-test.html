@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>语言切换功能测试</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        .container {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            margin-bottom: 20px;
+        }
+        .test-section {
+            margin-bottom: 30px;
+        }
+        .test-buttons {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+        button {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 14px;
+            transition: background-color 0.3s;
+        }
+        .btn-primary {
+            background-color: #007bff;
+            color: white;
+        }
+        .btn-primary:hover {
+            background-color: #0056b3;
+        }
+        .btn-secondary {
+            background-color: #6c757d;
+            color: white;
+        }
+        .btn-secondary:hover {
+            background-color: #545b62;
+        }
+        .btn-success {
+            background-color: #28a745;
+            color: white;
+        }
+        .btn-success:hover {
+            background-color: #1e7e34;
+        }
+        iframe {
+            width: 100%;
+            height: 600px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        .status {
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+        .status.info {
+            background-color: #d1ecf1;
+            color: #0c5460;
+            border: 1px solid #bee5eb;
+        }
+        .status.success {
+            background-color: #d4edda;
+            color: #155724;
+            border: 1px solid #c3e6cb;
+        }
+        .status.warning {
+            background-color: #fff3cd;
+            color: #856404;
+            border: 1px solid #ffeaa7;
+        }
+        .instructions {
+            background-color: #e9ecef;
+            padding: 15px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+        .console-output {
+            background-color: #f8f9fa;
+            border: 1px solid #dee2e6;
+            border-radius: 5px;
+            padding: 10px;
+            font-family: 'Courier New', monospace;
+            font-size: 12px;
+            max-height: 200px;
+            overflow-y: auto;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🔄 语言切换功能测试页面</h1>
+        <div class="status info">
+            <strong>测试目标：</strong>验证从俄语页面切换到英语页面是否正常工作
+        </div>
+        
+        <div class="instructions">
+            <h3>📋 测试步骤：</h3>
+            <ol>
+                <li>点击下方按钮加载俄语页面</li>
+                <li>在俄语页面中找到语言切换按钮（右上角的🇷🇺图标）</li>
+                <li>点击语言切换按钮，选择"English"选项</li>
+                <li>观察是否成功跳转到英语页面</li>
+                <li>检查控制台输出的调试信息</li>
+            </ol>
+        </div>
+        
+        <div class="test-section">
+            <h3>🎯 快速测试</h3>
+            <div class="test-buttons">
+                <button class="btn-primary" onclick="loadRussianPage()">
+                    🇷🇺 加载俄语页面
+                </button>
+                <button class="btn-secondary" onclick="loadEnglishPage()">
+                    🇺🇸 加载英语页面
+                </button>
+                <button class="btn-success" onclick="openConsole()">
+                    🔍 打开控制台
+                </button>
+                <button class="btn-secondary" onclick="clearConsole()">
+                    🧹 清空日志
+                </button>
+            </div>
+            
+            <div id="status-display" class="status info">
+                <strong>状态：</strong>等待测试开始...
+            </div>
+        </div>
+        
+        <div class="test-section">
+            <h3>🖥️ 网站预览</h3>
+            <iframe id="preview-frame" src="about:blank"></iframe>
+        </div>
+        
+        <div class="test-section">
+            <h3>📊 控制台输出</h3>
+            <div id="console-output" class="console-output">
+                等待控制台输出...
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        const iframe = document.getElementById('preview-frame');
+        const statusDisplay = document.getElementById('status-display');
+        const consoleOutput = document.getElementById('console-output');
+        
+        function updateStatus(message, type = 'info') {
+            statusDisplay.className = `status ${type}`;
+            statusDisplay.innerHTML = `<strong>状态：</strong>${message}`;
+        }
+        
+        function loadRussianPage() {
+            updateStatus('正在加载俄语页面...', 'info');
+            iframe.src = 'http://localhost:3003/ru';
+            
+            iframe.onload = function() {
+                updateStatus('✅ 俄语页面加载完成！现在请点击页面中的语言切换按钮测试功能', 'success');
+                logToConsole('🇷🇺 俄语页面已加载: http://localhost:3003/ru');
+            };
+            
+            iframe.onerror = function() {
+                updateStatus('❌ 俄语页面加载失败，请检查服务器是否运行', 'warning');
+                logToConsole('❌ 俄语页面加载失败');
+            };
+        }
+        
+        function loadEnglishPage() {
+            updateStatus('正在加载英语页面...', 'info');
+            iframe.src = 'http://localhost:3003/';
+            
+            iframe.onload = function() {
+                updateStatus('✅ 英语页面加载完成！', 'success');
+                logToConsole('🇺🇸 英语页面已加载: http://localhost:3003/');
+            };
+            
+            iframe.onerror = function() {
+                updateStatus('❌ 英语页面加载失败，请检查服务器是否运行', 'warning');
+                logToConsole('❌ 英语页面加载失败');
+            };
+        }
+        
+        function openConsole() {
+            updateStatus('请按F12或右键选择"检查"打开开发者工具查看控制台', 'info');
+            logToConsole('💡 提示：按F12打开开发者工具，查看Console标签页的详细日志');
+        }
+        
+        function clearConsole() {
+            consoleOutput.innerHTML = '控制台已清空...';
+            updateStatus('控制台日志已清空', 'info');
+        }
+        
+        function logToConsole(message) {
+            const timestamp = new Date().toLocaleTimeString();
+            const logEntry = `[${timestamp}] ${message}`;
+            consoleOutput.innerHTML += logEntry + '\n';
+            consoleOutput.scrollTop = consoleOutput.scrollHeight;
+        }
+        
+        // 监听iframe中的消息（如果有的话）
+        window.addEventListener('message', function(event) {
+            if (event.origin === 'http://localhost:3003') {
+                logToConsole('📨 收到iframe消息: ' + JSON.stringify(event.data));
+            }
+        });
+        
+        // 页面加载完成后的初始化
+        document.addEventListener('DOMContentLoaded', function() {
+            logToConsole('🚀 语言切换测试页面已准备就绪');
+            logToConsole('📝 请按照上方步骤进行测试');
+            updateStatus('测试页面已准备就绪，请点击"加载俄语页面"开始测试', 'info');
+        });
+    </script>
+</body>
+</html>

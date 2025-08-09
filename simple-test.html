@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>简单语言切换测试</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        .test-btn { background: #007bff; color: white; border: none; padding: 10px 20px; margin: 10px; border-radius: 5px; cursor: pointer; }
+        .test-btn:hover { background: #0056b3; }
+        iframe { width: 100%; height: 500px; border: 1px solid #ccc; margin-top: 20px; }
+        .log { background: #f8f9fa; padding: 10px; margin: 10px 0; border-radius: 5px; font-family: monospace; }
+    </style>
+</head>
+<body>
+    <h1>🔧 语言切换简单测试</h1>
+    
+    <div>
+        <button class="test-btn" onclick="testRussian()">测试俄语页面</button>
+        <button class="test-btn" onclick="testEnglish()">测试英语页面</button>
+        <button class="test-btn" onclick="openConsole()">打开浏览器控制台</button>
+    </div>
+    
+    <div class="log" id="log">
+        <strong>测试说明:</strong><br>
+        1. 点击"测试俄语页面"加载俄语版本<br>
+        2. 在页面中找到语言切换按钮（🇷🇺 Русский）<br>
+        3. 点击按钮，选择English<br>
+        4. 观察是否能正常切换到英语页面<br>
+        5. 如果卡住，请打开浏览器控制台查看错误信息
+    </div>
+    
+    <iframe id="testFrame" src="about:blank"></iframe>
+    
+    <script>
+        function testRussian() {
+            document.getElementById('testFrame').src = 'http://localhost:3001/ru';
+            document.getElementById('log').innerHTML += '<br>✅ 已加载俄语页面: /ru';
+        }
+        
+        function testEnglish() {
+            document.getElementById('testFrame').src = 'http://localhost:3001/';
+            document.getElementById('log').innerHTML += '<br>✅ 已加载英语页面: /';
+        }
+        
+        function openConsole() {
+            alert('请按 F12 或右键选择"检查"来打开浏览器控制台，查看详细的调试信息。');
+        }
+        
+        // 初始加载俄语页面
+        setTimeout(() => {
+            testRussian();
+        }, 1000);
+    </script>
+</body>
+</html>

@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>语言切换功能测试</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background: #f5f5f5;
+        }
+        .test-container {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            margin-bottom: 20px;
+        }
+        .test-button {
+            background: #007bff;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            margin: 5px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 14px;
+        }
+        .test-button:hover {
+            background: #0056b3;
+        }
+        .status {
+            margin: 10px 0;
+            padding: 10px;
+            border-radius: 5px;
+        }
+        .success {
+            background: #d4edda;
+            color: #155724;
+            border: 1px solid #c3e6cb;
+        }
+        .error {
+            background: #f8d7da;
+            color: #721c24;
+            border: 1px solid #f5c6cb;
+        }
+        .info {
+            background: #d1ecf1;
+            color: #0c5460;
+            border: 1px solid #bee5eb;
+        }
+        iframe {
+            width: 100%;
+            height: 600px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        .console-log {
+            background: #f8f9fa;
+            border: 1px solid #dee2e6;
+            border-radius: 5px;
+            padding: 10px;
+            margin: 10px 0;
+            font-family: monospace;
+            font-size: 12px;
+            max-height: 200px;
+            overflow-y: auto;
+        }
+    </style>
+</head>
+<body>
+    <h1>🔧 语言切换功能调试测试</h1>
+    
+    <div class="test-container">
+        <h2>测试控制面板</h2>
+        <button class="test-button" onclick="loadEnglishPage()">📄 加载英语页面 (/)</button>
+        <button class="test-button" onclick="loadRussianPage()">📄 加载俄语页面 (/ru)</button>
+        <button class="test-button" onclick="runAutoTest()">🤖 自动测试语言切换</button>
+        <button class="test-button" onclick="clearLogs()">🗑️ 清空日志</button>
+        
+        <div id="status" class="status info">
+            ✅ 测试工具已准备就绪。请先加载页面，然后手动测试语言切换按钮。
+        </div>
+        
+        <div class="console-log" id="console-log">
+            <strong>控制台日志:</strong><br>
+            等待测试开始...
+        </div>
+    </div>
+    
+    <div class="test-container">
+        <h2>网站预览</h2>
+        <iframe id="website-frame" src="http://localhost:3001/ru"></iframe>
+    </div>
+    
+    <script>
+        let testStep = 0;
+        
+        function log(message, type = 'info') {
+            const timestamp = new Date().toLocaleTimeString();
+            const logElement = document.getElementById('console-log');
+            const colorMap = {
+                'info': '#0c5460',
+                'success': '#155724',
+                'error': '#721c24',
+                'warning': '#856404'
+            };
+            
+            logElement.innerHTML += `<div style="color: ${colorMap[type] || '#000'}; margin: 2px 0;">[${timestamp}] ${message}</div>`;
+            logElement.scrollTop = logElement.scrollHeight;
+        }
+        
+        function updateStatus(message, type = 'info') {
+            const statusElement = document.getElementById('status');
+            statusElement.className = `status ${type}`;
+            statusElement.textContent = message;
+        }
+        
+        function loadEnglishPage() {
+            log('🔄 加载英语页面...', 'info');
+            document.getElementById('website-frame').src = 'http://localhost:3001/';
+            updateStatus('📄 已加载英语页面 (/)', 'success');
+        }
+        
+        function loadRussianPage() {
+            log('🔄 加载俄语页面...', 'info');
+            document.getElementById('website-frame').src = 'http://localhost:3001/ru';
+            updateStatus('📄 已加载俄语页面 (/ru)', 'success');
+        }
+        
+        function clearLogs() {
+            document.getElementById('console-log').innerHTML = '<strong>控制台日志:</strong><br>日志已清空...';
+            updateStatus('🗑️ 日志已清空', 'info');
+        }
+        
+        function runAutoTest() {
+            testStep = 0;
+            log('🤖 开始自动测试...', 'info');
+            updateStatus('🤖 正在运行自动测试...', 'info');
+            
+            // 测试步骤
+            setTimeout(() => {
+                log('步骤 1: 加载英语页面', 'info');
+                loadEnglishPage();
+            }, 1000);
+            
+            setTimeout(() => {
+                log('步骤 2: 等待页面加载完成', 'info');
+            }, 3000);
+            
+            setTimeout(() => {
+                log('步骤 3: 加载俄语页面', 'info');
+                loadRussianPage();
+            }, 5000);
+            
+            setTimeout(() => {
+                log('步骤 4: 等待页面加载完成', 'info');
+            }, 7000);
+            
+            setTimeout(() => {
+                log('步骤 5: 再次加载英语页面', 'info');
+                loadEnglishPage();
+            }, 9000);
+            
+            setTimeout(() => {
+                log('✅ 自动测试完成！请手动点击语言切换按钮进行最终测试。', 'success');
+                updateStatus('✅ 自动测试完成！现在请手动测试语言切换按钮。', 'success');
+            }, 11000);
+        }
+        
+        // 监听iframe加载事件
+        document.getElementById('website-frame').addEventListener('load', function() {
+            log('📄 页面加载完成: ' + this.src, 'success');
+        });
+        
+        // 初始化
+        log('🚀 语言切换调试工具已启动', 'success');
+        log('📋 测试说明:', 'info');
+        log('1. 点击"加载俄语页面"按钮', 'info');
+        log('2. 在预览窗口中点击语言切换按钮（🇷🇺 Русский）', 'info');
+        log('3. 选择英语选项，观察是否能正常切换', 'info');
+        log('4. 检查浏览器控制台是否有错误信息', 'info');
+    </script>
+</body>
+</html>
