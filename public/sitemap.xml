@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <!-- Main pages in English -->
+  <url>
+    <loc>https://svgtoico.org/</loc>
+    <lastmod>2024-01-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://svgtoico.org/en/" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://svgtoico.org/ru/" />
+  </url>
+  
+  <url>
+    <loc>https://svgtoico.org/en/</loc>
+    <lastmod>2024-01-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://svgtoico.org/en/" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://svgtoico.org/ru/" />
+  </url>
+  
+  <!-- Main pages in Russian -->
+  <url>
+    <loc>https://svgtoico.org/ru/</loc>
+    <lastmod>2024-01-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://svgtoico.org/en/" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://svgtoico.org/ru/" />
+  </url>
+  
+  <!-- Privacy Policy pages -->
+  <url>
+    <loc>https://svgtoico.org/en/privacy</loc>
+    <lastmod>2024-01-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://svgtoico.org/en/privacy" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://svgtoico.org/ru/privacy" />
+  </url>
+  
+  <url>
+    <loc>https://svgtoico.org/ru/privacy</loc>
+    <lastmod>2024-01-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://svgtoico.org/en/privacy" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://svgtoico.org/ru/privacy" />
+  </url>
+  
+  <!-- Terms of Service pages -->
+  <url>
+    <loc>https://svgtoico.org/en/terms</loc>
+    <lastmod>2024-01-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://svgtoico.org/en/terms" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://svgtoico.org/ru/terms" />
+  </url>
+  
+  <url>
+    <loc>https://svgtoico.org/ru/terms</loc>
+    <lastmod>2024-01-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://svgtoico.org/en/terms" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://svgtoico.org/ru/terms" />
+  </url>
+</urlset>

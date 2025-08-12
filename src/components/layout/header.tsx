@@ -15,6 +15,7 @@ interface HeaderProps {
 
 export function Header({ className }: HeaderProps) {
   const t = useTranslations('navigation');
+  const tAlt = useTranslations('alt');
 
   return (
     <header className={cn("sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60", className)}>
@@ -25,7 +26,7 @@ export function Header({ className }: HeaderProps) {
             <div className="flex items-center justify-center w-10 h-10 bg-primary/10 rounded-lg overflow-hidden">
               <Image
                 src="/logo.svg"
-                alt="Logo"
+                alt={tAlt('logo')}
                 width={24}
                 height={24}
                 className="w-6 h-6 object-contain"
@@ -33,9 +34,9 @@ export function Header({ className }: HeaderProps) {
               />
             </div>
             <div className="hidden sm:block">
-              <h1 className="text-xl font-bold bg-gradient-to-r from-primary to-primary/70 bg-clip-text text-transparent">
+              <div className="text-xl font-bold bg-gradient-to-r from-primary to-primary/70 bg-clip-text text-transparent">
                 {t('title')}
-              </h1>
+              </div>
               <p className="text-xs text-muted-foreground">
                 {t('subtitle')}
               </p>

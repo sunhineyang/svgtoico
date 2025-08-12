@@ -26,7 +26,7 @@ export default function PrivacyPage() {
 
           {/* 页面标题 */}
           <div className="text-center mb-12">
-            <h1 className="text-4xl font-bold mb-4">{t('title')}</h1>
+            <h2 className="text-4xl font-bold mb-4">{t('title')}</h2>
             <p className="text-lg text-muted-foreground">{t('lastUpdated')}</p>
           </div>
 

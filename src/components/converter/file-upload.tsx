@@ -7,6 +7,7 @@ import { useTranslations } from 'next-intl';
 import { useConverterStore } from '@/store/converter-store';
 import { Button } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
+import Image from 'next/image';
 
 interface FileUploadProps {
   className?: string;
@@ -14,6 +15,7 @@ interface FileUploadProps {
 
 export function FileUpload({ className }: FileUploadProps) {
   const t = useTranslations('converter');
+  const tAlt = useTranslations('alt');
   const { selectedFile, filePreview, setSelectedFile, setError } = useConverterStore();
 
   const onDrop = useCallback((acceptedFiles: File[], rejectedFiles: any[]) => {
@@ -118,10 +120,12 @@ export function FileUpload({ className }: FileUploadProps) {
             <div className="flex-shrink-0">
               {filePreview ? (
                 <div className="w-16 h-16 border border-border rounded-lg overflow-hidden bg-background">
-                  <img
+                  <Image
                     src={filePreview}
-                    alt={`Preview of ${selectedFile.name}`}
+                    alt={tAlt('filePreview', { fileName: selectedFile.name })}
                     className="w-full h-full object-contain"
+                    width={64}
+                    height={64}
                   />
                 </div>
               ) : (

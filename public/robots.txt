@@ -1,0 +1,20 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://svgtoico.org/sitemap.xml
+
+# Crawl-delay for polite crawling
+Crawl-delay: 1
+
+# Disallow admin or private areas (if any)
+# Disallow: /admin/
+# Disallow: /private/
+
+# Allow important pages
+Allow: /en/
+Allow: /ru/
+Allow: /favicon.ico
+Allow: /logo.ico
+Allow: /logo.svg
+Allow: /logo.png

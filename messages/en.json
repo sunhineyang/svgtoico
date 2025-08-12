@@ -1,6 +1,6 @@
 {
   "common": {
-    "title": "Image to ICO Converter",
+    "title": "SVG to ICO & ICO Converter Online",
     "description": "Convert SVG, PNG, JPG files to ICO format with customizable settings",
     "loading": "Loading...",
     "error": "Error",
@@ -15,8 +15,12 @@
     "browse": "Browse",
     "language": "Language"
   },
+  "alt": {
+    "logo": "SVG to ICO Online Converter - Free Icon Format Converter",
+    "filePreview": "SVG to ICO Tool File Preview - {fileName} - Online Icon Converter"
+  },
   "navigation": {
-    "title": "Image to ICO",
+    "title": "SVG to ICO",
     "subtitle": "Professional Image to ICO Converter",
     "home": "Home",
     "converter": "Converter",
@@ -32,13 +36,13 @@
     "toggle": "Toggle theme"
   },
   "header": {
-    "title": "Image to ICO",
+    "title": "SVG to ICO & ICO Converter Online",
     "subtitle": "Professional Image to ICO Converter",
     "github": "GitHub",
     "sponsor": "Sponsor"
   },
   "footer": {
-    "brand": "Image to ICO Converter",
+    "brand": "SVG to ICO & ICO Converter Online",
     "description": "Professional online tool for converting SVG, PNG, JPG files to ICO format with advanced customization options.",
     "quickLinks": "Quick Links",
     "home": "Home",
@@ -61,7 +65,7 @@
       "terms": "Terms of Service"
     },
     "brand": {
-      "title": "Image to ICO",
+      "title": "SVG to ICO & ICO Converter Online",
       "description": "Professional online tool for converting SVG, PNG, JPG files to ICO format with advanced customization options."
     },
     "sections": {
@@ -86,7 +90,7 @@
       "sponsor": "Sponsor Us"
     },
     "copyright": {
-      "text": "Image to ICO Converter. All rights reserved.",
+      "text": "SVG to ICO & ICO Converter Online. All rights reserved.",
       "madeWith": "Made with",
       "by": "by developers"
     }
@@ -214,6 +218,34 @@
     "q8": {
       "question": "What's the best format to convert to ICO?",
       "answer": "SVG files are ideal for ICO conversion as they maintain quality at all sizes. However, our image to ICO converter works well with PNG, JPG, and other formats too."
+    },
+    "q9": {
+      "question": "How do I convert PNG to ICO?",
+      "answer": "Converting PNG to ICO is simple! Just upload your PNG file using our converter, choose your preferred settings (size, quality, background), and click convert. PNG files work great for ICO conversion, especially for images with transparency."
+    },
+    "q10": {
+      "question": "Can I convert JPG to ICO format?",
+      "answer": "Yes! Our converter fully supports JPG to ICO conversion. Upload your JPG image, select your desired ICO sizes and quality settings, then download your converted ICO file. Perfect for converting photos or graphics to icon format."
+    },
+    "q11": {
+      "question": "What's the difference between PNG to ICO and JPG to ICO conversion?",
+      "answer": "PNG to ICO preserves transparency and works best for logos and graphics with transparent backgrounds. JPG to ICO is ideal for photographic content but doesn't support transparency. Both formats convert excellently to ICO using our tool."
+    },
+    "q12": {
+      "question": "What's the maximum file size I can convert?",
+      "answer": "Our converter supports files up to 10MB in size. This limit ensures fast processing while accommodating most image files. For larger files, consider compressing your image first or using a smaller resolution version for optimal conversion speed."
+    },
+    "q13": {
+      "question": "Can I convert multiple files at once (batch conversion)?",
+      "answer": "Currently, our converter processes one file at a time to ensure optimal quality and performance. However, you can quickly convert multiple files by repeating the simple 3-step process for each image. We're working on batch conversion features for future updates."
+    },
+    "q14": {
+      "question": "Does the converter work on mobile devices?",
+      "answer": "Yes! Our ICO converter is fully responsive and works perfectly on smartphones and tablets. The interface adapts to your screen size, making it easy to upload, convert, and download ICO files on any device with a modern web browser."
+    },
+    "q15": {
+      "question": "What should I do if my converted ICO file doesn't look right?",
+      "answer": "If your ICO file appears blurry or distorted, try these solutions: 1) Use a higher quality setting during conversion, 2) Ensure your source image has sufficient resolution (at least 256x256 pixels), 3) For SVG files, simplify complex elements, 4) Choose appropriate background settings. Contact support if issues persist."
     }
   },
   "converter": {

@@ -11,7 +11,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from '@/components/ui/accordion';
-import { FileImage, Zap, Shield, Download, Star, Users, Clock, HelpCircle } from 'lucide-react';
+import { FileImage, Zap, Shield, Download, Star, Users, Clock, HelpCircle, Upload, Settings, ArrowRight } from 'lucide-react';
 
 export function HomeContent() {
   const t = useTranslations();
@@ -33,7 +33,7 @@ export function HomeContent() {
               
               <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight">
                 <span className="bg-gradient-to-r from-foreground to-foreground/70 bg-clip-text text-transparent">
-                  {t('hero.title')}
+                  SVG to ICO & ICO Converter Online
                 </span>
               </h1>
               
@@ -55,6 +55,116 @@ export function HomeContent() {
                   {t('hero.cta.primary')}
                 </Button>
               </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Converter Section */}
+        <section id="converter" className="py-16 lg:py-24">
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+            <SvgToIcoConverter />
+          </div>
+        </section>
+
+        {/* Guide Section */}
+        <section id="guide" className="py-16 lg:py-24 bg-gradient-to-br from-background to-muted/30">
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center space-y-4 mb-16">
+              <div className="flex justify-center">
+                <div className="p-3 bg-primary/10 rounded-full">
+                  <HelpCircle className="h-6 w-6 text-primary" />
+                </div>
+              </div>
+              <h2 className="text-3xl lg:text-4xl font-bold">{t('guide.title')}</h2>
+              <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+                {t('guide.description')}
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+              {/* Step 1 */}
+              <div className="relative">
+                <div className="text-center space-y-6 p-8 rounded-2xl bg-background border border-border hover:shadow-lg transition-all duration-300">
+                  <div className="flex justify-center">
+                    <div className="relative">
+                      <div className="p-6 bg-primary/10 rounded-full">
+                        <Upload className="h-10 w-10 text-primary" />
+                      </div>
+                      <div className="absolute -top-2 -right-2 w-8 h-8 bg-primary text-primary-foreground rounded-full flex items-center justify-center text-sm font-bold">
+                        1
+                      </div>
+                    </div>
+                  </div>
+                  <div className="space-y-3">
+                    <h3 className="text-xl font-semibold">{t('guide.step1.title')}</h3>
+                    <p className="text-muted-foreground leading-relaxed">{t('guide.step1.description')}</p>
+                  </div>
+                </div>
+                {/* Arrow for desktop */}
+                <div className="hidden md:block absolute top-1/2 -right-4 transform -translate-y-1/2">
+                  <ArrowRight className="h-6 w-6 text-muted-foreground" />
+                </div>
+              </div>
+
+              {/* Step 2 */}
+              <div className="relative">
+                <div className="text-center space-y-6 p-8 rounded-2xl bg-background border border-border hover:shadow-lg transition-all duration-300">
+                  <div className="flex justify-center">
+                    <div className="relative">
+                      <div className="p-6 bg-primary/10 rounded-full">
+                        <Settings className="h-10 w-10 text-primary" />
+                      </div>
+                      <div className="absolute -top-2 -right-2 w-8 h-8 bg-primary text-primary-foreground rounded-full flex items-center justify-center text-sm font-bold">
+                        2
+                      </div>
+                    </div>
+                  </div>
+                  <div className="space-y-3">
+                    <h3 className="text-xl font-semibold">{t('guide.step2.title')}</h3>
+                    <p className="text-muted-foreground leading-relaxed">{t('guide.step2.description')}</p>
+                  </div>
+                </div>
+                {/* Arrow for desktop */}
+                <div className="hidden md:block absolute top-1/2 -right-4 transform -translate-y-1/2">
+                  <ArrowRight className="h-6 w-6 text-muted-foreground" />
+                </div>
+              </div>
+
+              {/* Step 3 */}
+              <div className="relative">
+                <div className="text-center space-y-6 p-8 rounded-2xl bg-background border border-border hover:shadow-lg transition-all duration-300">
+                  <div className="flex justify-center">
+                    <div className="relative">
+                      <div className="p-6 bg-primary/10 rounded-full">
+                        <Download className="h-10 w-10 text-primary" />
+                      </div>
+                      <div className="absolute -top-2 -right-2 w-8 h-8 bg-primary text-primary-foreground rounded-full flex items-center justify-center text-sm font-bold">
+                        3
+                      </div>
+                    </div>
+                  </div>
+                  <div className="space-y-3">
+                    <h3 className="text-xl font-semibold">{t('guide.step3.title')}</h3>
+                    <p className="text-muted-foreground leading-relaxed">{t('guide.step3.description')}</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* CTA Button */}
+            <div className="text-center mt-12">
+              <Button 
+                size="lg" 
+                className="min-w-[200px]"
+                onClick={() => {
+                  const converterSection = document.getElementById('converter');
+                  if (converterSection) {
+                    converterSection.scrollIntoView({ behavior: 'smooth' });
+                  }
+                }}
+              >
+                {t('hero.cta.primary')}
+              </Button>
             </div>
           </div>
         </section>
@@ -100,13 +210,6 @@ export function HomeContent() {
                 <div className="text-sm text-muted-foreground">{t('stats.availability')}</div>
               </div>
             </div>
-          </div>
-        </section>
-
-        {/* Converter Section */}
-        <section id="converter" className="py-16 lg:py-24">
-          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-            <SvgToIcoConverter />
           </div>
         </section>
 
@@ -247,6 +350,87 @@ export function HomeContent() {
                   </AccordionTrigger>
                   <AccordionContent className="text-muted-foreground leading-relaxed pb-6">
                     {t('faq.q6.answer')}
+                  </AccordionContent>
+                </AccordionItem>
+                
+                <AccordionItem value="item-7" className="border border-border rounded-lg px-6">
+                  <AccordionTrigger className="text-left hover:no-underline">
+                    <span className="text-lg font-semibold">{t('faq.q7.question')}</span>
+                  </AccordionTrigger>
+                  <AccordionContent className="text-muted-foreground leading-relaxed pb-6">
+                    {t('faq.q7.answer')}
+                  </AccordionContent>
+                </AccordionItem>
+                
+                <AccordionItem value="item-8" className="border border-border rounded-lg px-6">
+                  <AccordionTrigger className="text-left hover:no-underline">
+                    <span className="text-lg font-semibold">{t('faq.q8.question')}</span>
+                  </AccordionTrigger>
+                  <AccordionContent className="text-muted-foreground leading-relaxed pb-6">
+                    {t('faq.q8.answer')}
+                  </AccordionContent>
+                </AccordionItem>
+                
+                <AccordionItem value="item-9" className="border border-border rounded-lg px-6">
+                  <AccordionTrigger className="text-left hover:no-underline">
+                    <span className="text-lg font-semibold">{t('faq.q9.question')}</span>
+                  </AccordionTrigger>
+                  <AccordionContent className="text-muted-foreground leading-relaxed pb-6">
+                    {t('faq.q9.answer')}
+                  </AccordionContent>
+                </AccordionItem>
+                
+                <AccordionItem value="item-10" className="border border-border rounded-lg px-6">
+                  <AccordionTrigger className="text-left hover:no-underline">
+                    <span className="text-lg font-semibold">{t('faq.q10.question')}</span>
+                  </AccordionTrigger>
+                  <AccordionContent className="text-muted-foreground leading-relaxed pb-6">
+                    {t('faq.q10.answer')}
+                  </AccordionContent>
+                </AccordionItem>
+                
+                <AccordionItem value="item-11" className="border border-border rounded-lg px-6">
+                  <AccordionTrigger className="text-left hover:no-underline">
+                    <span className="text-lg font-semibold">{t('faq.q11.question')}</span>
+                  </AccordionTrigger>
+                  <AccordionContent className="text-muted-foreground leading-relaxed pb-6">
+                    {t('faq.q11.answer')}
+                  </AccordionContent>
+                </AccordionItem>
+                
+                <AccordionItem value="item-12" className="border border-border rounded-lg px-6">
+                  <AccordionTrigger className="text-left hover:no-underline">
+                    <span className="text-lg font-semibold">{t('faq.q12.question')}</span>
+                  </AccordionTrigger>
+                  <AccordionContent className="text-muted-foreground leading-relaxed pb-6">
+                    {t('faq.q12.answer')}
+                  </AccordionContent>
+                </AccordionItem>
+                
+                <AccordionItem value="item-13" className="border border-border rounded-lg px-6">
+                  <AccordionTrigger className="text-left hover:no-underline">
+                    <span className="text-lg font-semibold">{t('faq.q13.question')}</span>
+                  </AccordionTrigger>
+                  <AccordionContent className="text-muted-foreground leading-relaxed pb-6">
+                    {t('faq.q13.answer')}
+                  </AccordionContent>
+                </AccordionItem>
+                
+                <AccordionItem value="item-14" className="border border-border rounded-lg px-6">
+                  <AccordionTrigger className="text-left hover:no-underline">
+                    <span className="text-lg font-semibold">{t('faq.q14.question')}</span>
+                  </AccordionTrigger>
+                  <AccordionContent className="text-muted-foreground leading-relaxed pb-6">
+                    {t('faq.q14.answer')}
+                  </AccordionContent>
+                </AccordionItem>
+                
+                <AccordionItem value="item-15" className="border border-border rounded-lg px-6">
+                  <AccordionTrigger className="text-left hover:no-underline">
+                    <span className="text-lg font-semibold">{t('faq.q15.question')}</span>
+                  </AccordionTrigger>
+                  <AccordionContent className="text-muted-foreground leading-relaxed pb-6">
+                    {t('faq.q15.answer')}
                   </AccordionContent>
                 </AccordionItem>
               </Accordion>

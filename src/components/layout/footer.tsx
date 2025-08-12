@@ -13,6 +13,7 @@ interface FooterProps {
 
 export function Footer({ className }: FooterProps) {
   const t = useTranslations('footer');
+  const tAlt = useTranslations('alt');
   const currentYear = new Date().getFullYear();
 
   const socialLinks = [
@@ -34,12 +35,12 @@ export function Footer({ className }: FooterProps) {
             <div className="flex items-center space-x-3">
               <div className="flex items-center justify-center w-8 h-8 bg-primary/10 rounded-lg overflow-hidden">
                 <Image
-                  src="/logo.svg"
-                  alt="Logo"
-                  width={20}
-                  height={20}
-                  className="w-5 h-5 object-contain"
-                />
+                src="/logo.svg"
+                alt={tAlt('logo')}
+                width={20}
+                height={20}
+                className="w-5 h-5 object-contain"
+              />
               </div>
               <span className="text-lg font-bold">{t('brand.title')}</span>
             </div>

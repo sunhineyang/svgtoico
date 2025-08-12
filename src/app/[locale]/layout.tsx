@@ -5,8 +5,17 @@ import { notFound } from 'next/navigation';
 import { routing } from '@/i18n/routing';
 
 export const metadata: Metadata = {
-  title: "SVG to ICO Converter - Free Online Tool",
-  description: "Convert SVG files to ICO format online for free. High-quality conversion with multiple sizes and customizable settings.",
+  title: "SVG to ICO Converter | PNG to ICO | JPG to ICO - Free Online Tool",
+  description: "Convert SVG to ICO, PNG to ICO, JPG to ICO online for free. High-quality image conversion with multiple sizes and customizable settings. Fast and secure.",
+  keywords: "svg to ico, png to ico, jpg to ico, image converter, icon converter, favicon generator, online converter, free tool",
+  icons: {
+    icon: '/logo.ico',
+    shortcut: '/logo.ico',
+    apple: '/logo.png',
+  },
+  alternates: {
+    canonical: 'https://svgtoico.org',
+  },
 };
 
 export default async function LocaleLayout({
