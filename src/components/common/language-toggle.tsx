@@ -16,7 +16,9 @@ interface LanguageToggleProps {
 
 const languages = [
   { code: 'en', name: 'English', flag: '🇺🇸' },
-  { code: 'ru', name: 'Русский', flag: '🇷🇺' }
+  { code: 'ru', name: 'Русский', flag: '🇷🇺' },
+  { code: 'ko', name: '한국어', flag: '🇰🇷' },
+  { code: 'ja', name: '日本語', flag: '🇯🇵' }
 ];
 
 export function LanguageToggle({ className }: LanguageToggleProps) {
@@ -62,12 +64,13 @@ export function LanguageToggle({ className }: LanguageToggleProps) {
     }
     
     try {
-      // SEO友好的URL结构：英文使用根路径 /，俄文使用 /ru
+      // SEO友好的URL结构：英文使用根路径 /，其他语言使用 /语言代码
       const targetUrl = langCode === 'en' 
         ? window.location.origin + '/'
         : window.location.origin + '/' + langCode;
       
-      console.log(`🌍 切换到${langCode === 'en' ? '英语' : '俄语'}，跳转到 ${langCode === 'en' ? '/' : '/' + langCode}`);
+      const languageNames = { en: '英语', ru: '俄语', ko: '韩语', ja: '日语' };
+      console.log(`🌍 切换到${languageNames[langCode as keyof typeof languageNames]}，跳转到 ${langCode === 'en' ? '/' : '/' + langCode}`);
       console.log('🎯 目标URL:', targetUrl);
       console.log('🚀 执行页面跳转');
       

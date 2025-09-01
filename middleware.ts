@@ -6,5 +6,5 @@ export default createMiddleware(routing);
 export const config = {
   // Match all paths except static files and API routes
   // Include locale paths like /ru, /en etc.
-  matcher: ['/((?!api|_next/static|_next/image|favicon.ico).*)', '/', '/(ru|en)/:path*'],
+  matcher: ['/((?!api|_next/static|_next/image|favicon.ico).*)', '/', '/(ru|en|ko|ja)/:path*'],
 };

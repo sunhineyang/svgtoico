@@ -8,6 +8,8 @@
     <priority>1.0</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://svgtoico.org/en/" />
     <xhtml:link rel="alternate" hreflang="ru" href="https://svgtoico.org/ru/" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://svgtoico.org/ko/" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://svgtoico.org/ja/" />
   </url>
   
   <url>
@@ -17,6 +19,8 @@
     <priority>1.0</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://svgtoico.org/en/" />
     <xhtml:link rel="alternate" hreflang="ru" href="https://svgtoico.org/ru/" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://svgtoico.org/ko/" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://svgtoico.org/ja/" />
   </url>
   
   <!-- Main pages in Russian -->
@@ -27,6 +31,32 @@
     <priority>1.0</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://svgtoico.org/en/" />
     <xhtml:link rel="alternate" hreflang="ru" href="https://svgtoico.org/ru/" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://svgtoico.org/ko/" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://svgtoico.org/ja/" />
+  </url>
+  
+  <!-- Main pages in Korean -->
+  <url>
+    <loc>https://svgtoico.org/ko/</loc>
+    <lastmod>2024-01-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://svgtoico.org/en/" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://svgtoico.org/ru/" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://svgtoico.org/ko/" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://svgtoico.org/ja/" />
+  </url>
+  
+  <!-- Main pages in Japanese -->
+  <url>
+    <loc>https://svgtoico.org/ja/</loc>
+    <lastmod>2024-01-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://svgtoico.org/en/" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://svgtoico.org/ru/" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://svgtoico.org/ko/" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://svgtoico.org/ja/" />
   </url>
   
   <!-- Privacy Policy pages -->
@@ -37,6 +67,8 @@
     <priority>0.5</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://svgtoico.org/en/privacy" />
     <xhtml:link rel="alternate" hreflang="ru" href="https://svgtoico.org/ru/privacy" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://svgtoico.org/ko/privacy" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://svgtoico.org/ja/privacy" />
   </url>
   
   <url>
@@ -46,6 +78,30 @@
     <priority>0.5</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://svgtoico.org/en/privacy" />
     <xhtml:link rel="alternate" hreflang="ru" href="https://svgtoico.org/ru/privacy" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://svgtoico.org/ko/privacy" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://svgtoico.org/ja/privacy" />
+  </url>
+  
+  <url>
+    <loc>https://svgtoico.org/ko/privacy</loc>
+    <lastmod>2024-01-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://svgtoico.org/en/privacy" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://svgtoico.org/ru/privacy" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://svgtoico.org/ko/privacy" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://svgtoico.org/ja/privacy" />
+  </url>
+  
+  <url>
+    <loc>https://svgtoico.org/ja/privacy</loc>
+    <lastmod>2024-01-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://svgtoico.org/en/privacy" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://svgtoico.org/ru/privacy" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://svgtoico.org/ko/privacy" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://svgtoico.org/ja/privacy" />
   </url>
   
   <!-- Terms of Service pages -->
@@ -56,6 +112,8 @@
     <priority>0.5</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://svgtoico.org/en/terms" />
     <xhtml:link rel="alternate" hreflang="ru" href="https://svgtoico.org/ru/terms" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://svgtoico.org/ko/terms" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://svgtoico.org/ja/terms" />
   </url>
   
   <url>
@@ -65,5 +123,29 @@
     <priority>0.5</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://svgtoico.org/en/terms" />
     <xhtml:link rel="alternate" hreflang="ru" href="https://svgtoico.org/ru/terms" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://svgtoico.org/ko/terms" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://svgtoico.org/ja/terms" />
+  </url>
+  
+  <url>
+    <loc>https://svgtoico.org/ko/terms</loc>
+    <lastmod>2024-01-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://svgtoico.org/en/terms" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://svgtoico.org/ru/terms" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://svgtoico.org/ko/terms" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://svgtoico.org/ja/terms" />
+  </url>
+  
+  <url>
+    <loc>https://svgtoico.org/ja/terms</loc>
+    <lastmod>2024-01-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://svgtoico.org/en/terms" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://svgtoico.org/ru/terms" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://svgtoico.org/ko/terms" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://svgtoico.org/ja/terms" />
   </url>
 </urlset>

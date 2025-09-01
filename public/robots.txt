@@ -13,6 +13,8 @@ Crawl-delay: 1
 
 # Allow important pages
 Allow: /en/
+Allow: /ko/
+Allow: /ja/
 Allow: /ru/
 Allow: /favicon.ico
 Allow: /logo.ico

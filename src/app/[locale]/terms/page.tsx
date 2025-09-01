@@ -4,6 +4,30 @@ import { Footer } from '@/components/layout/footer';
 import { Button } from '@/components/ui/button';
 import { ArrowLeft } from 'lucide-react';
 import Link from 'next/link';
+import { Metadata } from 'next';
+
+type Props = {
+  params: Promise<{ locale: string }>;
+};
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { locale } = await params;
+  const canonicalUrl = locale === 'en' 
+    ? 'https://svgtoico.org/terms'
+    : `https://svgtoico.org/${locale}/terms`;
+
+  return {
+    alternates: {
+      canonical: canonicalUrl,
+      languages: {
+        'en': 'https://svgtoico.org/terms',
+        'ko': 'https://svgtoico.org/ko/terms',
+        'ja': 'https://svgtoico.org/ja/terms',
+        'ru': 'https://svgtoico.org/ru/terms',
+      },
+    },
+  };
+}
 
 export default function TermsPage() {
   const t = useTranslations('terms');

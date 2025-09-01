@@ -56,11 +56,11 @@ interface ConverterState {
   convertFile: () => Promise<void>;
 }
 
-// 默认设置
+// 默认设置 - 优化为用户首选的高质量、透明背景、全尺寸
 const defaultSettings: ConversionSettings = {
-  sizes: [16, 32, 48],
-  quality: 'high',
-  background: 'transparent',
+  sizes: [16, 32, 48, 64, 128, 256], // 全尺寸包含所有标准图标尺寸
+  quality: 'high', // 高质量设置
+  background: 'transparent', // 透明背景
 };
 
 // 初始状态

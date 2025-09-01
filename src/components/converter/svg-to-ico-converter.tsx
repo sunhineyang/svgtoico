@@ -73,82 +73,110 @@ export function SvgToIcoConverter({ className }: SvgToIcoConverterProps) {
         </div>
       )}
 
-      {/* 主要内容区域 */}
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-        {/* 左侧：文件上传和设置 */}
+      {/* 主要内容区域 - 优化后的布局 */}
+      {!selectedFile ? (
+        /* 未上传文件时的初始状态 */
         <div className="space-y-6">
-          {/* 文件上传 */}
           <div className="space-y-4">
             <h2 className="text-xl font-semibold">{t('upload.title')}</h2>
             <FileUpload />
           </div>
+          
+          {/* 占位符提示 */}
+          <div className="h-full min-h-[300px] flex items-center justify-center">
+            <div className="text-center space-y-4 max-w-sm">
+              <div className="w-16 h-16 mx-auto bg-muted rounded-full flex items-center justify-center">
+                <Play className="h-8 w-8 text-muted-foreground" />
+              </div>
+              <div className="space-y-2">
+                <h3 className="text-lg font-medium text-muted-foreground">
+                  {t('placeholder.title')}
+                </h3>
+                <p className="text-sm text-muted-foreground">
+                  {t('placeholder.description')}
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      ) : (
+        /* 已上传文件后的布局：左侧图片，右侧选项 */
+        <div className="space-y-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            {/* 左侧：已上传的文件预览 */}
+            <div className="space-y-4">
+              <h2 className="text-xl font-semibold">{t('upload.title')}</h2>
+              <FileUpload />
+            </div>
 
-          {/* 转换设置 */}
-          {selectedFile && !isConverting && !hasResult && (
-            <ConversionSettings />
-          )}
+            {/* 右侧：转换设置选项 */}
+            {!isConverting && !hasResult && (
+              <div className="space-y-4">
+                <h2 className="text-xl font-semibold">{t('settings.title')}</h2>
+                <ConversionSettings />
+              </div>
+            )}
+          </div>
 
-          {/* 转换按钮 */}
-          {selectedFile && !isConverting && !hasResult && (
-            <div className="space-y-3">
-              <Button
-                onClick={handleConvert}
-                disabled={!canConvert}
-                size="lg"
-                className="w-full"
-              >
-                <Play className="h-4 w-4 mr-2" />
-                {t('actions.convert')}
-              </Button>
-              
-              <p className="text-xs text-muted-foreground text-center">
-                {t('actions.convertDesc')}
-              </p>
+          {/* 大的生成按钮区域 - 放在图片和选项下方 */}
+          {!isConverting && !hasResult && (
+            <div className="flex justify-center py-6">
+              <div className="space-y-3 text-center">
+                <Button
+                  onClick={handleConvert}
+                  disabled={!canConvert}
+                  size="lg"
+                  className="px-12 py-4 text-lg font-semibold min-w-[200px]"
+                >
+                  <Play className="h-5 w-5 mr-3" />
+                  {t('actions.convert')}
+                </Button>
+                
+                <p className="text-sm text-muted-foreground max-w-md">
+                  {t('actions.convertDesc')}
+                </p>
+              </div>
             </div>
           )}
         </div>
+      )}
 
-        {/* 右侧：进度、结果或占位符 */}
-        <div className="space-y-6">
+      {/* 底部转换进度和结果区域 */}
+      {(isConverting || hasResult) && (
+        <div className="pt-8 border-t border-border space-y-6">
           {/* 转换进度 */}
           {isConverting && (
             <div className="space-y-4">
-              <h2 className="text-xl font-semibold">{t('progress.title')}</h2>
+              <h2 className="text-xl font-semibold text-center">{t('progress.title')}</h2>
               <ConversionProgress />
             </div>
           )}
 
           {/* 转换结果 */}
           {hasResult && (
-            <div className="space-y-4">
-              <h2 className="text-xl font-semibold">{t('result.title')}</h2>
+            <div className="space-y-6">
+              <h2 className="text-xl font-semibold text-center">{t('result.title')}</h2>
               <ConversionResult />
-            </div>
-          )}
-
-          {/* 占位符（当没有文件时） */}
-          {!selectedFile && !isConverting && !hasResult && (
-            <div className="h-full min-h-[400px] flex items-center justify-center">
-              <div className="text-center space-y-4 max-w-sm">
-                <div className="w-16 h-16 mx-auto bg-muted rounded-full flex items-center justify-center">
-                  <Play className="h-8 w-8 text-muted-foreground" />
-                </div>
-                <div className="space-y-2">
-                  <h3 className="text-lg font-medium text-muted-foreground">
-                    {t('placeholder.title')}
-                  </h3>
-                  <p className="text-sm text-muted-foreground">
-                    {t('placeholder.description')}
-                  </p>
-                </div>
+              
+              {/* 重新转换按钮 */}
+              <div className="flex justify-center pt-4">
+                <Button
+                  onClick={reset}
+                  variant="outline"
+                  size="lg"
+                  className="min-w-[200px]"
+                >
+                  <RotateCcw className="h-4 w-4 mr-2" />
+                  {t('actions.convertAnother')}
+                </Button>
               </div>
             </div>
           )}
         </div>
-      </div>
+      )}
 
-      {/* 底部操作区域 */}
-      {(hasResult || hasError) && (
+      {/* 底部操作区域 - 仅在错误时显示 */}
+      {hasError && !isConverting && !hasResult && (
         <div className="pt-6 border-t border-border">
           <div className="flex justify-center">
             <Button

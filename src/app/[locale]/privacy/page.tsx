@@ -4,6 +4,30 @@ import { Footer } from '@/components/layout/footer';
 import { Button } from '@/components/ui/button';
 import { ArrowLeft } from 'lucide-react';
 import Link from 'next/link';
+import { Metadata } from 'next';
+
+type Props = {
+  params: Promise<{ locale: string }>;
+};
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { locale } = await params;
+  const canonicalUrl = locale === 'en' 
+    ? 'https://svgtoico.org/privacy'
+    : `https://svgtoico.org/${locale}/privacy`;
+
+  return {
+    alternates: {
+      canonical: canonicalUrl,
+      languages: {
+        'en': 'https://svgtoico.org/privacy',
+        'ko': 'https://svgtoico.org/ko/privacy',
+        'ja': 'https://svgtoico.org/ja/privacy',
+        'ru': 'https://svgtoico.org/ru/privacy',
+      },
+    },
+  };
+}
 
 export default function PrivacyPage() {
   const t = useTranslations('privacy');

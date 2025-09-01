@@ -1,0 +1,560 @@
+{
+  "common": {
+    "title": "SVG를 ICO 및 ICO 변환기 온라인",
+    "description": "사용자 정의 설정으로 SVG, PNG, JPG 파일을 ICO 형식으로 변환",
+    "loading": "로딩 중...",
+    "error": "오류",
+    "success": "성공",
+    "download": "다운로드",
+    "preview": "미리보기",
+    "reset": "재설정",
+    "convert": "변환",
+    "selectFile": "파일 선택",
+    "dragDrop": "드래그 앤 드롭",
+    "or": "또는",
+    "browse": "찾아보기",
+    "language": "언어",
+    "learnMore": "더 알아보기"
+  },
+  "alt": {
+    "logo": "SVG를 ICO 온라인 변환기 - 무료 아이콘 형식 변환기",
+    "filePreview": "SVG를 ICO 도구 파일 미리보기 - {fileName} - 온라인 아이콘 변환기"
+  },
+  "navigation": {
+    "title": "SVG를 ICO로",
+    "subtitle": "전문 이미지를 ICO 변환기",
+    "home": "홈",
+    "converter": "변환기",
+    "features": "기능",
+    "guide": "가이드",
+    "faq": "자주 묻는 질문",
+    "sponsor": "후원"
+  },
+  "converter": {
+    "title": "이미지를 ICO로 변환",
+    "subtitle": "이미지 파일(SVG, PNG, JPG)을 업로드하고 변환 설정을 사용자 정의하세요",
+    "upload": {
+      "title": "이미지 파일 업로드",
+      "dragDrop": "이미지 파일을 여기에 드래그 앤 드롭하세요",
+      "or": "또는",
+      "browse": "파일 찾아보기",
+      "supported": "지원 형식: SVG, PNG, JPG",
+      "maxSize": "최대 파일 크기: 10MB",
+      "selected": "선택된 파일:",
+      "error": "파일 업로드 오류",
+      "invalidType": "유효한 이미지 파일(SVG, PNG, JPG)을 선택해주세요",
+      "tooLarge": "파일 크기가 10MB 제한을 초과합니다"
+    },
+    "settings": {
+      "title": "변환 설정",
+      "quality": {
+        "title": "품질",
+        "high": "고품질",
+        "highDesc": "최고 품질, 큰 파일 크기",
+        "medium": "중간 품질",
+        "mediumDesc": "균형잡힌 품질과 파일 크기",
+        "low": "낮은 품질",
+        "lowDesc": "작은 파일 크기, 낮은 품질"
+      },
+      "background": {
+        "title": "배경",
+        "transparent": "투명",
+        "white": "흰색",
+        "black": "검은색",
+        "custom": "사용자 정의",
+        "customColor": "사용자 정의 색상"
+      },
+      "sizes": {
+        "title": "아이콘 크기",
+        "small": "작업표시줄용 작은 아이콘",
+        "medium": "데스크톱용 중간 아이콘",
+        "large": "고해상도 디스플레이용 큰 아이콘",
+        "multi": "다중 크기 (권장)",
+        "multiDesc": "모든 용도에 맞는 일반적인 크기 포함",
+        "all": "모든 크기",
+        "allDesc": "모든 표준 크기의 완전한 세트",
+        "selected": "선택된 크기"
+      },
+      "summary": {
+        "title": "설정 요약"
+      }
+    },
+    "progress": {
+      "title": "변환 중...",
+      "subtitle": "이미지를 처리하는 동안 잠시 기다려주세요",
+      "preparing": "변환 준비 중",
+      "processing": "SVG 처리 중",
+      "generating": "ICO 생성 중",
+      "finalizing": "마무리 중",
+      "complete": "변환 완료",
+      "reading": "파일 읽는 중",
+      "readingDesc": "이미지 파일을 로드하고 분석 중",
+      "processingDesc": "이미지 데이터를 변환하고 설정을 적용 중",
+      "generatingDesc": "선택된 크기로 ICO 파일 생성 중",
+      "step": "단계",
+      "tip": "팁: 큰 파일은 처리하는 데 몇 분이 걸릴 수 있습니다"
+    },
+    "result": {
+      "title": "변환 완료!",
+      "subtitle": "ICO 파일을 다운로드할 준비가 되었습니다",
+      "success": "변환 완료!",
+      "successDesc": "SVG 파일이 ICO 형식으로 성공적으로 변환되었습니다.",
+      "download": "ICO 다운로드",
+      "preview": "미리보기",
+      "newConversion": "다른 파일 변환",
+      "convertAnother": "다른 파일 변환",
+      "convertedAt": "변환 시간",
+      "fileInfo": "파일 정보",
+      "filename": "파일명",
+      "filesize": "파일 크기",
+      "dimensions": "크기",
+      "format": "형식",
+      "created": "생성됨",
+      "tips": {
+        "title": "ICO 파일 사용 팁",
+        "tip1": "ICO 파일은 Windows 애플리케이션과 웹사이트에 가장 적합합니다",
+        "tip2": "하나의 파일에 여러 크기가 있으면 다양한 디스플레이에서 호환성을 보장합니다",
+        "tip3": "다양한 테마와 더 나은 통합을 위해 투명한 배경을 사용하세요"
+      }
+    },
+    "error": {
+      "title": "변환 실패",
+      "subtitle": "변환 중 오류가 발생했습니다",
+      "retry": "다시 시도",
+      "selectNew": "새 파일 선택"
+    },
+    "common": {
+      "invalidFile": "잘못된 파일 형식",
+      "fileTooBig": "파일 크기가 너무 큽니다",
+      "processingError": "파일 처리 오류",
+      "networkError": "네트워크 오류가 발생했습니다",
+      "browse": "파일 찾아보기",
+      "upload": "SVG 파일 업로드",
+      "or": "또는",
+      "clickToBrowse": "클릭하여 찾아보기"
+    },
+    "placeholder": {
+      "title": "SVG를 ICO로 변환",
+      "description": "SVG 파일을 업로드하고 즉시 ICO 형식으로 변환하세요"
+    },
+    "guide": {
+      "title": "SVG를 ICO로 변환하는 방법",
+      "description": "SVG 파일을 변환하는 간단한 3단계 과정",
+      "step1": {
+        "title": "SVG 파일 업로드",
+        "description": "SVG 파일을 드래그 앤 드롭하거나 클릭하여 찾아보기"
+      },
+      "step2": {
+        "title": "설정 선택",
+        "description": "선호하는 ICO 크기와 품질을 선택하세요"
+      },
+      "step3": {
+        "title": "ICO 다운로드",
+        "description": "변환을 클릭하고 ICO 파일을 다운로드하세요"
+      }
+    },
+    "dropzone": {
+      "title": "SVG 파일을 여기에 드롭하세요",
+      "subtitle": "또는 클릭하여 찾아보기",
+      "supportedFormats": "지원 형식: SVG"
+    },
+    "actions": {
+      "convert": "ICO로 변환",
+      "convertDesc": "변환 과정 시작",
+      "convertAnother": "다른 파일 변환",
+      "download": "다운로드",
+      "preview": "미리보기"
+    }
+  },
+  "theme": {
+    "light": "밝음",
+    "dark": "어둠",
+    "system": "시스템",
+    "toggle": "테마 전환"
+  },
+  "header": {
+    "title": "SVG를 ICO 및 ICO 변환기 온라인",
+    "subtitle": "전문 이미지를 ICO 변환기",
+    "github": "GitHub",
+    "sponsor": "후원"
+  },
+  "footer": {
+    "brand": "SVG를 ICO 및 ICO 변환기 온라인",
+    "description": "고급 사용자 정의 옵션으로 SVG, PNG, JPG 파일을 ICO 형식으로 변환하는 전문 온라인 도구입니다.",
+    "quickLinks": "빠른 링크",
+    "home": "홈",
+    "converter": "변환기",
+    "about": "소개",
+    "contact": "연락처",
+    "resources": "리소스",
+    "documentation": "문서",
+    "apiReference": "API 참조",
+    "tutorials": "튜토리얼",
+    "support": "지원",
+    "helpCenter": "도움말 센터",
+    "community": "커뮤니티",
+    "reportBug": "버그 신고",
+    "copyright": "© 2024 SVG를 ICO 변환기. 모든 권리 보유.",
+    "privacy": "개인정보 보호정책",
+    "terms": "서비스 약관",
+    "legal": {
+      "privacy": "개인정보 보호정책",
+      "terms": "서비스 약관"
+    },
+    "brand": {
+      "title": "SVG를 ICO 및 ICO 변환기 온라인",
+      "description": "고급 사용자 정의 옵션으로 SVG, PNG, JPG 파일을 ICO 형식으로 변환하는 전문 온라인 도구입니다."
+    },
+    "sections": {
+      "quickLinks": "빠른 링크",
+      "resources": "리소스",
+      "support": "지원하기"
+    },
+    "links": {
+      "features": "기능",
+      "guide": "사용 방법",
+      "faq": "자주 묻는 질문",
+      "privacy": "개인정보 보호정책"
+    },
+    "resources": {
+      "documentation": "문서",
+      "api": "API 참조",
+      "support": "지원",
+      "changelog": "변경 로그"
+    },
+    "support": {
+      "description": "개발을 지원하여 이 도구를 개선하는 데 도움을 주세요.",
+      "sponsor": "후원하기"
+    },
+    "copyright": {
+      "text": "SVG를 ICO 및 ICO 변환기 온라인. 모든 권리 보유.",
+      "madeWith": "제작:",
+      "by": "개발자들"
+    }
+  },
+  "hero": {
+    "badge": "무료 온라인 도구",
+    "title": "SVG를 파비콘 및 ICO 변환기 온라인",
+    "subtitle": "다중 형식 지원을 갖춘 전문 SVG를 ICO 변환기",
+    "description": "확장 가능한 벡터 그래픽을 고품질 파비콘 및 아이콘 파일로 변환하세요. 우리의 고급 SVG를 ICO 변환기는 사용자 정의 설정으로 PNG를 ICO, JPG를 ICO, 이미지를 ICO 변환을 포함한 여러 형식을 지원합니다.",
+    "cta": {
+      "primary": "변환 시작",
+      "secondary": "더 알아보기"
+    }
+  },
+  "stats": {
+    "users": "만족한 사용자",
+    "conversions": "변환된 파일",
+    "rating": "사용자 평점",
+    "availability": "가용성"
+  },
+  "features": {
+    "title": "왜 우리의 ICO 변환기를 선택해야 할까요?",
+    "subtitle": "완벽한 ICO 변환을 위한 전문급 기능",
+    "description": "완벽한 ICO 변환을 위한 전문급 기능",
+    "fast": {
+      "title": "번개처럼 빠름",
+      "description": "클라이언트 측 처리로 빠른 변환과 완전한 개인정보 보호 보장"
+    },
+    "secure": {
+      "title": "100% 안전",
+      "description": "파일이 브라우저를 떠나지 않습니다. 완전한 개인정보 보호 보장."
+    },
+    "quality": {
+      "title": "고품질",
+      "description": "고급 알고리즘으로 모든 크기에서 선명하고 깨끗한 아이콘 보장"
+    }
+  },
+  "svgToFavicon": {
+    "title": "SVG를 파비콘 변환기",
+    "subtitle": "SVG 파일에서 완벽한 파비콘 만들기",
+    "description": "전문 SVG를 파비콘 변환기로 SVG 파일을 파비콘 형식으로 변환하세요. 여러 크기와 형식으로 웹사이트용 고품질 파비콘을 생성합니다.",
+    "features": {
+      "multiSize": {
+        "title": "다중 크기 파비콘 생성",
+        "description": "모든 표준 크기로 파비콘 생성: 16x16, 32x32, 48x48 등"
+      },
+      "webOptimized": {
+        "title": "웹 최적화 출력",
+        "description": "완벽한 파비콘 호환성으로 웹 브라우저에 최적화"
+      },
+      "instantPreview": {
+        "title": "즉시 미리보기",
+        "description": "다운로드하기 전에 파비콘이 어떻게 보일지 확인"
+      }
+    }
+  },
+  "multiFormatConverter": {
+    "title": "다중 형식 ICO 변환기",
+    "subtitle": "모든 이미지를 ICO 형식으로 변환",
+    "description": "우리의 다재다능한 이미지를 ICO 변환기는 여러 입력 형식을 지원합니다. 전문 품질로 PNG를 ICO, JPG를 ICO 및 기타 이미지 형식을 ICO로 변환하세요.",
+    "supportedFormats": {
+      "title": "지원되는 입력 형식",
+      "svg": "SVG를 ICO - 벡터 그래픽 변환",
+      "png": "PNG를 ICO - 래스터 이미지 변환",
+      "jpg": "JPG를 ICO - JPEG 이미지 변환",
+      "gif": "GIF를 ICO - 애니메이션 이미지 변환",
+      "bmp": "BMP를 ICO - 비트맵 변환",
+      "webp": "WebP를 ICO - 현대 형식 변환"
+    },
+    "benefits": {
+      "title": "왜 우리의 ICO 변환 도구를 사용해야 할까요?",
+      "quality": "변환 중 원본 이미지 품질 유지",
+      "batch": "여러 파일의 일괄 변환 지원",
+      "sizes": "하나의 ICO 파일에 여러 아이콘 크기 생성",
+      "compatibility": "Windows 및 웹 애플리케이션과 완벽한 호환성"
+    }
+  },
+  "guide": {
+    "title": "작동 방식",
+    "description": "SVG 파일을 변환하는 간단한 3단계 과정",
+    "step1": {
+      "title": "이미지 업로드",
+      "description": "이미지 파일(SVG, PNG, JPG)을 선택하거나 드래그 앤 드롭"
+    },
+    "step2": {
+      "title": "설정 사용자 정의",
+      "description": "품질, 배경 및 아이콘 크기 선택"
+    },
+    "step3": {
+      "title": "ICO 다운로드",
+      "description": "변환된 ICO 파일을 즉시 받기"
+    }
+  },
+  "faq": {
+    "title": "자주 묻는 질문",
+    "description": "SVG를 ICO 변환 및 파비콘 생성에 대해 알아야 할 모든 것",
+    "q1": {
+      "question": "ICO 파일이란 무엇인가요?",
+      "answer": "ICO는 Microsoft Windows의 컴퓨터 아이콘용 파일 형식입니다. ICO 파일에는 여러 크기와 색상 깊이의 하나 이상의 작은 이미지가 포함되어 적절한 크기 조정이 가능합니다."
+    },
+    "q2": {
+      "question": "SVG를 ICO와 SVG를 파비콘의 차이점은 무엇인가요?",
+      "answer": "SVG를 파비콘은 웹사이트용으로 특별히 웹 최적화된 아이콘을 만들고, SVG를 ICO는 범용 아이콘 파일을 만듭니다. 우리의 변환기는 두 형식을 완벽하게 처리합니다."
+    },
+    "q3": {
+      "question": "PNG를 ICO나 JPG를 ICO로 변환할 수 있나요?",
+      "answer": "네! 우리의 다중 형식 ICO 변환기는 PNG를 ICO, JPG를 ICO 및 많은 다른 이미지 형식을 지원합니다. 단순히 이미지를 업로드하고 ICO 형식으로 변환하세요."
+    },
+    "q4": {
+      "question": "어떤 SVG 기능이 지원되나요?",
+      "answer": "우리의 변환기는 경로, 도형, 그라디언트, 텍스트를 포함한 대부분의 SVG 기능을 지원합니다. 복잡한 애니메이션과 인터랙티브 요소는 보존되지 않을 수 있습니다."
+    },
+    "q5": {
+      "question": "내 데이터가 안전한가요?",
+      "answer": "네! 모든 변환은 브라우저에서 이루어집니다. 파일이 기기를 떠나지 않아 완전한 개인정보 보호와 보안을 보장합니다."
+    },
+    "q6": {
+      "question": "ICO 변환을 위해 어떤 크기를 선택해야 하나요?",
+      "answer": "일반적인 사용을 위해서는 대부분의 일반적인 애플리케이션과 디스플레이 시나리오를 다루는 다중 크기 옵션(16x16, 32x32, 48x48)을 권장합니다."
+    },
+    "q7": {
+      "question": "변환된 ICO 파일을 어떻게 사용하나요?",
+      "answer": "ICO 파일은 애플리케이션 아이콘, 웹사이트 파비콘 또는 데스크톱 바로가기로 사용할 수 있습니다. Windows 애플리케이션과 웹 브라우저와 호환됩니다."
+    },
+    "q8": {
+      "question": "ICO로 변환하기에 가장 좋은 형식은 무엇인가요?",
+      "answer": "SVG 파일은 모든 크기에서 품질을 유지하므로 ICO 변환에 이상적입니다. 하지만 우리의 이미지를 ICO 변환기는 PNG, JPG 및 기타 형식에서도 잘 작동합니다."
+    },
+    "q9": {
+      "question": "PNG를 ICO로 어떻게 변환하나요?",
+      "answer": "PNG를 ICO로 변환하는 것은 간단합니다! 우리의 변환기를 사용하여 PNG 파일을 업로드하고, 원하는 설정(크기, 품질, 배경)을 선택한 다음 변환을 클릭하세요. PNG 파일은 특히 투명도가 있는 이미지의 경우 ICO 변환에 매우 적합합니다."
+    },
+    "q10": {
+      "question": "JPG를 ICO 형식으로 변환할 수 있나요?",
+      "answer": "네! 우리의 변환기는 JPG를 ICO 변환을 완전히 지원합니다. JPG 이미지를 업로드하고, 원하는 ICO 크기와 품질 설정을 선택한 다음 변환된 ICO 파일을 다운로드하세요. 사진이나 그래픽을 아이콘 형식으로 변환하는 데 완벽합니다."
+    },
+    "q11": {
+      "question": "PNG를 ICO와 JPG를 ICO 변환의 차이점은 무엇인가요?",
+      "answer": "PNG를 ICO는 투명도를 보존하며 투명한 배경이 있는 로고와 그래픽에 가장 적합합니다. JPG를 ICO는 사진 콘텐츠에 이상적이지만 투명도를 지원하지 않습니다. 두 형식 모두 우리 도구를 사용하여 ICO로 훌륭하게 변환됩니다."
+    },
+    "q12": {
+      "question": "변환할 수 있는 최대 파일 크기는 얼마인가요?",
+      "answer": "우리의 변환기는 최대 10MB 크기의 파일을 지원합니다. 이 제한은 대부분의 이미지 파일을 수용하면서 빠른 처리를 보장합니다. 더 큰 파일의 경우 먼저 이미지를 압축하거나 최적의 변환 속도를 위해 더 작은 해상도 버전을 사용하는 것을 고려하세요."
+    },
+    "q13": {
+      "question": "여러 파일을 한 번에 변환할 수 있나요(일괄 변환)?",
+      "answer": "현재 우리의 변환기는 최적의 품질과 성능을 보장하기 위해 한 번에 하나의 파일을 처리합니다. 하지만 각 이미지에 대해 간단한 3단계 과정을 반복하여 여러 파일을 빠르게 변환할 수 있습니다. 향후 업데이트를 위해 일괄 변환 기능을 개발 중입니다."
+    },
+    "q14": {
+      "question": "변환기가 모바일 기기에서 작동하나요?",
+      "answer": "네! 우리의 ICO 변환기는 완전히 반응형이며 스마트폰과 태블릿에서 완벽하게 작동합니다. 인터페이스가 화면 크기에 맞춰 조정되어 최신 웹 브라우저가 있는 모든 기기에서 ICO 파일을 쉽게 업로드, 변환 및 다운로드할 수 있습니다."
+    },
+    "q15": {
+      "question": "변환된 ICO 파일이 제대로 보이지 않으면 어떻게 해야 하나요?",
+      "answer": "ICO 파일이 흐릿하거나 왜곡되어 보이면 다음 해결책을 시도해보세요: 1) 변환 중에 더 높은 품질 설정 사용, 2) 소스 이미지가 충분한 해상도(최소 256x256 픽셀)를 가지고 있는지 확인, 3) SVG 파일의 경우 복잡한 요소 단순화, 4) 적절한 배경 설정 선택. 문제가 지속되면 지원팀에 문의하세요."
+    }
+  },
+  "bestPractices": {
+    "title": "파비콘 최적화 모범 사례",
+    "description": "완벽한 파비콘을 만들기 위한 전문가 팁",
+    "practice1": {
+      "title": "간단하고 인식 가능한 디자인 사용",
+      "description": "파비콘은 16x16 픽셀만큼 작게 표시되므로 간단하고 대비가 높은 디자인이 가장 잘 작동합니다."
+    },
+    "practice2": {
+      "title": "여러 크기 테스트",
+      "description": "다양한 크기(16x16, 32x32, 48x48)에서 파비콘을 테스트하여 모든 크기에서 선명하게 보이는지 확인하세요."
+    },
+    "practice3": {
+      "title": "브랜드 일관성 유지",
+      "description": "파비콘이 브랜드 색상과 스타일을 반영하여 일관된 브랜드 경험을 만드세요."
+    }
+  },
+  "comparison": {
+    "title": "SVG vs ICO: 언제 어떤 것을 사용해야 할까요?",
+    "description": "다양한 사용 사례에 적합한 형식 선택",
+    "svg": {
+      "title": "SVG 파비콘",
+      "pros": [
+        "무한 확장 가능 - 모든 크기에서 선명함",
+        "작은 파일 크기",
+        "현대 브라우저 지원",
+        "CSS로 스타일링 가능"
+      ],
+      "cons": [
+        "구형 브라우저에서 제한된 지원",
+        "복잡한 이미지에는 적합하지 않음"
+      ],
+      "bestFor": "현대 웹사이트 및 간단한 아이콘 디자인"
+    },
+    "ico": {
+      "title": "ICO 파비콘",
+      "pros": [
+        "범용 브라우저 지원",
+        "여러 크기를 하나의 파일에 포함",
+        "Windows 시스템과 완벽한 호환성",
+        "복잡한 이미지 지원"
+      ],
+      "cons": [
+        "더 큰 파일 크기",
+        "확장성 제한"
+      ],
+      "bestFor": "최대 호환성 및 복잡한 아이콘 디자인"
+    }
+  },
+  "privacy": {
+    "title": "개인정보 보호정책",
+    "lastUpdated": "최종 업데이트: 2024년 1월",
+    "introduction": {
+      "title": "소개",
+      "content": "SVG to ICO 변환기에서 귀하의 개인정보를 보호하는 것은 우리의 최우선 과제입니다. 이 개인정보 보호정책은 우리가 귀하의 정보를 수집, 사용 및 보호하는 방법을 설명합니다."
+    },
+    "dataCollection": {
+      "title": "데이터 수집",
+      "content": "우리는 다음과 같은 정보를 수집할 수 있습니다:",
+      "items": [
+        "변환을 위해 업로드하는 파일 (임시적으로만)",
+        "사용 통계 및 분석 데이터",
+        "기술 정보 (브라우저 유형, IP 주소)",
+        "쿠키 및 유사한 추적 기술"
+      ]
+    },
+    "dataUsage": {
+      "title": "데이터 사용",
+      "content": "수집된 데이터는 다음 목적으로 사용됩니다:",
+      "items": [
+        "파일 변환 서비스 제공",
+        "서비스 성능 개선",
+        "사용자 경험 향상",
+        "기술 지원 제공"
+      ]
+    },
+    "dataProtection": {
+      "title": "데이터 보호",
+      "content": "우리는 귀하의 데이터를 보호하기 위해 다음과 같은 조치를 취합니다:",
+      "items": [
+        "업로드된 파일은 변환 후 즉시 삭제됩니다",
+        "SSL 암호화를 사용한 안전한 데이터 전송",
+        "정기적인 보안 감사 및 업데이트",
+        "제한된 데이터 액세스 및 직원 교육"
+      ]
+    },
+    "cookies": {
+      "title": "쿠키",
+      "content": "우리는 쿠키를 사용하여 사용자 경험을 개선합니다. 브라우저 설정에서 쿠키를 비활성화할 수 있지만, 이는 일부 기능에 영향을 줄 수 있습니다."
+    },
+    "thirdParty": {
+      "title": "제3자 서비스",
+      "content": "우리는 분석 및 성능 모니터링을 위해 제3자 서비스를 사용할 수 있습니다. 이러한 서비스에는 자체 개인정보 보호정책이 있습니다."
+    },
+    "userRights": {
+      "title": "사용자 권리",
+      "content": "귀하는 다음과 같은 권리를 가집니다:",
+      "items": [
+        "개인 데이터에 대한 액세스 요청",
+        "부정확한 데이터의 수정 요청",
+        "특정 상황에서 데이터 삭제 요청",
+        "데이터 처리에 대한 이의 제기"
+      ]
+    },
+    "contact": {
+      "title": "연락처",
+      "content": "개인정보 보호에 대한 질문이나 우려사항이 있으시면 언제든지 연락해 주세요."
+    },
+    "updates": {
+      "title": "정책 업데이트",
+      "content": "이 개인정보 보호정책을 주기적으로 업데이트할 수 있습니다. 중요한 변경사항은 웹사이트에 공지됩니다."
+    }
+  },
+  "terms": {
+    "title": "서비스 약관",
+    "lastUpdated": "최종 업데이트: 2024년 1월",
+    "introduction": {
+      "title": "소개",
+      "content": "SVG to ICO 변환기 서비스를 사용함으로써 귀하는 다음 약관에 동의하게 됩니다. 이 약관을 주의 깊게 읽어주세요."
+    },
+    "serviceDescription": {
+      "title": "서비스 설명",
+      "content": "우리는 이미지 파일을 ICO 형식으로 변환하는 무료 온라인 도구를 제공합니다. 이 서비스는 '있는 그대로' 제공되며 가용성을 보장하지 않습니다."
+    },
+    "userResponsibilities": {
+      "title": "사용자 책임",
+      "content": "서비스를 사용할 때 귀하는 다음에 동의합니다:",
+      "items": [
+        "적법하고 윤리적인 목적으로만 서비스 사용",
+        "저작권이 있는 자료를 적절한 권한 없이 업로드하지 않음",
+        "악성 코드나 유해한 콘텐츠를 업로드하지 않음",
+        "서비스나 서버에 과도한 부하를 주지 않음"
+      ]
+    },
+    "intellectualProperty": {
+      "title": "지적 재산권",
+      "content": "업로드하는 파일에 대한 모든 권리는 귀하에게 있습니다. 우리는 변환 목적으로만 파일을 처리하며 변환 후 즉시 삭제합니다."
+    },
+    "serviceAvailability": {
+      "title": "서비스 가용성",
+      "content": "우리는 서비스의 지속적인 가용성을 보장할 수 없습니다. 유지보수, 업그레이드 또는 기타 이유로 서비스가 일시적으로 중단될 수 있습니다."
+    },
+    "disclaimers": {
+      "title": "면책 조항",
+      "content": "서비스는 '있는 그대로' 제공됩니다. 우리는 다음에 대해 보증하지 않습니다:",
+      "items": [
+        "서비스의 중단 없는 운영",
+        "변환 결과의 완벽성이나 정확성",
+        "특정 목적에 대한 적합성",
+        "제3자 콘텐츠나 링크"
+      ]
+    },
+    "limitationOfLiability": {
+      "title": "책임 제한",
+      "content": "법률이 허용하는 최대 범위 내에서, 우리는 서비스 사용으로 인한 직접적, 간접적, 부수적 또는 결과적 손해에 대해 책임지지 않습니다."
+    },
+    "termination": {
+      "title": "서비스 종료",
+      "content": "우리는 언제든지 통지 없이 서비스를 수정, 일시 중단 또는 종료할 권리를 보유합니다. 또한 이 약관을 위반하는 사용자의 액세스를 차단할 수 있습니다."
+    },
+    "governingLaw": {
+      "title": "준거법",
+      "content": "이 약관은 관련 법률에 따라 해석되고 집행됩니다. 분쟁은 적절한 관할 법원에서 해결됩니다."
+    },
+    "contact": {
+      "title": "연락처",
+      "content": "이 약관에 대한 질문이 있으시면 언제든지 연락해 주세요."
+    },
+    "updates": {
+      "title": "약관 업데이트",
+      "content": "이 약관을 주기적으로 업데이트할 수 있습니다. 계속해서 서비스를 사용하는 것은 업데이트된 약관에 대한 동의를 의미합니다."
+    }
+  }
+}
