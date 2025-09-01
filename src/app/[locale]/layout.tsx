@@ -22,9 +22,9 @@ export async function generateMetadata({
     description: "Convert SVG to ICO, PNG to ICO, JPG to ICO online for free. High-quality image conversion with multiple sizes and customizable settings. Fast and secure.",
     keywords: "svg to ico, png to ico, jpg to ico, image converter, icon converter, favicon generator, online converter, free tool",
     icons: {
-      icon: '/logo.ico',
-      shortcut: '/logo.ico',
-      apple: '/logo.png',
+      icon: '/logo.svg',
+      apple: '/logo.svg',
+      shortcut: '/logo.svg',
     },
     alternates: {
       canonical: canonicalUrl,

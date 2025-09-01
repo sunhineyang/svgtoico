@@ -14,16 +14,12 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "SVG to ICO Converter | PNG to ICO | JPG to ICO - Free Online Tool",
-  description: "Convert SVG to ICO, PNG to ICO, JPG to ICO online for free. High-quality image conversion with multiple sizes and customizable settings. Fast and secure.",
-  keywords: "svg to ico, png to ico, jpg to ico, image converter, icon converter, favicon generator, online converter, free tool",
+  title: 'SVG to ICO Converter',
+  description: 'Convert SVG files to ICO format online for free',
   icons: {
-    icon: '/logo.ico',
-    shortcut: '/logo.ico',
-    apple: '/logo.png',
-  },
-  alternates: {
-    canonical: 'https://svgtoico.org',
+    icon: '/logo.svg',
+    apple: '/logo.svg',
+    shortcut: '/logo.svg',
   },
 };
 
@@ -35,21 +31,9 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
-        {/* Google Analytics */}
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-RR94T94NQW"></script>
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
-              window.dataLayer = window.dataLayer || [];
-              function gtag(){dataLayer.push(arguments);}
-              gtag('js', new Date());
-              gtag('config', 'G-RR94T94NQW');
-            `,
-          }}
-        />
-        <link rel="icon" href="/logo.ico" sizes="any" />
-        <link rel="icon" href="/logo.svg" type="image/svg+xml" />
-        <link rel="apple-touch-icon" href="/logo.png" />
+        <link rel="icon" type="image/svg+xml" href="/logo.svg" />
+        <link rel="apple-touch-icon" href="/logo.svg" />
+        <link rel="shortcut icon" href="/logo.svg" />
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
