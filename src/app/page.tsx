@@ -21,6 +21,15 @@ export const metadata = {
   title: "SVG to ICO Converter - Free Online Tool",
   description: "Convert SVG files to ICO format online for free. High-quality conversion with multiple sizes and customizable settings.",
   keywords: "SVG to ICO, favicon converter, icon converter, online tool",
+  alternates: {
+    canonical: 'https://svgtoico.org',
+    languages: {
+      'en': 'https://svgtoico.org',
+      'ko': 'https://svgtoico.org/ko',
+      'ja': 'https://svgtoico.org/ja',
+      'ru': 'https://svgtoico.org/ru',
+    },
+  },
   openGraph: {
     title: "SVG to ICO Converter - Free Online Tool",
     description: "Convert SVG files to ICO format online for free. High-quality conversion with multiple sizes and customizable settings.",
