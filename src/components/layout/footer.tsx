@@ -22,6 +22,12 @@ export function Footer({ className }: FooterProps) {
       href: 'mailto:0992sunshine@gmail.com',
       icon: Mail,
       external: false
+    },
+    {
+      name: t('svgToPngApp'),
+      href: 'https://svgtopng.app',
+      icon: ExternalLink,
+      external: true
     }
   ];
 

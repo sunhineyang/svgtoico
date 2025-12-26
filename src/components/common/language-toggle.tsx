@@ -16,9 +16,10 @@ interface LanguageToggleProps {
 
 const languages = [
   { code: 'en', name: 'English', flag: '🇺🇸' },
-  { code: 'ru', name: 'Русский', flag: '🇷🇺' },
+  { code: 'de', name: 'Deutsch', flag: '🇩🇪' },
+  { code: 'ja', name: '日本語', flag: '🇯🇵' },
   { code: 'ko', name: '한국어', flag: '🇰🇷' },
-  { code: 'ja', name: '日本語', flag: '🇯🇵' }
+  { code: 'ru', name: 'Русский', flag: '🇷🇺' }
 ];
 
 export function LanguageToggle({ className }: LanguageToggleProps) {
@@ -69,7 +70,7 @@ export function LanguageToggle({ className }: LanguageToggleProps) {
         ? window.location.origin + '/'
         : window.location.origin + '/' + langCode;
       
-      const languageNames = { en: '英语', ru: '俄语', ko: '韩语', ja: '日语' };
+      const languageNames = { en: '英语', de: '德语', ja: '日语', ko: '韩语', ru: '俄语' };
       console.log(`🌍 切换到${languageNames[langCode as keyof typeof languageNames]}，跳转到 ${langCode === 'en' ? '/' : '/' + langCode}`);
       console.log('🎯 目标URL:', targetUrl);
       console.log('🚀 执行页面跳转');
