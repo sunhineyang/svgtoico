@@ -87,12 +87,12 @@
       "description": "Helfen Sie uns, dieses Tool zu verbessern, indem Sie unsere Entwicklung unterstützen.",
       "sponsor": "Unterstützen Sie uns"
     },
-    "svgToPngApp": "SVG zu PNG",
     "copyright": {
       "text": "SVG zu ICO & ICO Konverter Online. Alle Rechte vorbehalten.",
       "madeWith": "Erstellt mit",
       "by": "von Entwicklern"
-    }
+    },
+    "svgToPngApp": "SVG zu PNG"
   },
   "hero": {
     "badge": "Kostenloses Online-Tool",
