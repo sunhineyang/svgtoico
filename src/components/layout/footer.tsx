@@ -28,6 +28,12 @@ export function Footer({ className }: FooterProps) {
       href: 'https://svgtopng.app',
       icon: ExternalLink,
       external: true
+    },
+    {
+      name: 'AI Face Rate',
+      href: 'https://aifacerate.com',
+      icon: ExternalLink,
+      external: true
     }
   ];
 
