@@ -27,7 +27,8 @@
     "features": "Features",
     "guide": "Guide",
     "faq": "FAQ",
-    "sponsor": "Sponsor"
+    "sponsor": "Sponsor",
+    "history": "History"
   },
   "theme": {
     "light": "Light",
@@ -57,6 +58,7 @@
     "helpCenter": "Help Center",
     "community": "Community",
     "reportBug": "Report Bug",
+    "history": "History",
     "copyright": "© 2024 SVG to ICO Converter. All rights reserved.",
     "privacy": "Privacy Policy",
     "terms": "Terms of Service",
@@ -322,6 +324,7 @@
       "preview": "Preview",
       "newConversion": "Convert Another File",
       "convertAnother": "Convert Another File",
+      "viewHistory": "View History",
       "convertedAt": "Converted at",
       "fileInfo": "File Information",
       "filename": "Filename",
@@ -661,6 +664,31 @@
     "contact": {
       "title": "Contact Information",
       "content": "If you have any questions about these Terms of Service, please contact us at 0992sunshine@gmail.com. We will address your concerns promptly and professionally."
+    }
+  },
+  "history": {
+    "title": "Conversion History",
+    "description": "View and manage your past ICO conversions",
+    "loading": "Loading history...",
+    "totalConversions": "Total Conversions",
+    "totalSize": "Total Size",
+    "lastConversion": "Last Conversion",
+    "recentConversions": "Recent Conversions",
+    "refresh": "Refresh",
+    "clearAll": "Clear All",
+    "confirmDelete": "Are you sure you want to delete this item?",
+    "confirmClearAll": "Are you sure you want to clear all history? This action cannot be undone.",
+    "download": "Download",
+    "delete": "Delete",
+    "noConversions": "No conversions yet",
+    "justNow": "Just now",
+    "minutesAgo": "{count} minute ago",
+    "hoursAgo": "{count} hour ago",
+    "daysAgo": "{count} day ago",
+    "empty": {
+      "title": "No Conversion History",
+      "description": "You haven't converted any files yet. Start converting to see your history here.",
+      "startConverting": "Start Converting"
     }
   }
 }

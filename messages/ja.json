@@ -14,7 +14,8 @@
     "sponsor": "スポンサー",
     "about": "について",
     "privacy": "プライバシー",
-    "terms": "利用規約"
+    "terms": "利用規約",
+    "history": "履歴"
   },
   "theme": {
     "light": "ライト",
@@ -181,8 +182,9 @@
      "support": "サポート",
      "helpCenter": "ヘルプセンター",
      "community": "コミュニティ",
-     "reportBug": "バグ報告",
-     "copyright": "© 2024 SVG to ICO Converter. All rights reserved.",
+    "reportBug": "バグ報告",
+    "history": "履歴",
+    "copyright": "© 2024 SVG to ICO Converter. All rights reserved.",
      "privacy": "プライバシーポリシー",
      "terms": "利用規約",
      "legal": {
@@ -623,6 +625,31 @@
     "updates": {
       "title": "規約の更新",
       "content": "この規約を定期的に更新する場合があります。サービスを継続して使用することは、更新された規約への同意を意味します。"
+    }
+  },
+  "history": {
+    "title": "変換履歴",
+    "description": "過去のICO変換を表示・管理",
+    "loading": "履歴を読み込み中...",
+    "totalConversions": "総変換回数",
+    "totalSize": "総サイズ",
+    "lastConversion": "最後の変換",
+    "recentConversions": "最近の変換",
+    "refresh": "更新",
+    "clearAll": "すべてクリア",
+    "confirmDelete": "この項目を削除してもよろしいですか？",
+    "confirmClearAll": "すべての履歴をクリアしてもよろしいですか？この操作は取り消せません。",
+    "download": "ダウンロード",
+    "delete": "削除",
+    "noConversions": "まだ変換していません",
+    "justNow": "たった今",
+    "minutesAgo": "{count}分前",
+    "hoursAgo": "{count}時間前",
+    "daysAgo": "{count}日前",
+    "empty": {
+      "title": "変換履歴なし",
+      "description": "まだファイルを変換していません。変換を開始すると、ここに履歴が表示されます。",
+      "startConverting": "変換を開始"
     }
   }
 }

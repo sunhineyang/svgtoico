@@ -8,6 +8,7 @@ import { Button } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
 import { Github, Heart } from 'lucide-react';
 import Image from 'next/image';
+import Link from 'next/link';
 
 interface HeaderProps {
   className?: string;
@@ -63,6 +64,12 @@ export function Header({ className }: HeaderProps) {
             >
               {t('faq')}
             </a>
+            <Link
+              href="/history"
+              className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
+            >
+              {t('history')}
+            </Link>
           </nav>
 
           {/* 右侧操作区 */}

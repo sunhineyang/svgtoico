@@ -27,7 +27,8 @@
     "features": "Características",
     "guide": "Guía",
     "faq": "Preguntas frecuentes",
-    "sponsor": "Patrocinador"
+    "sponsor": "Patrocinador",
+    "history": "Historial"
   },
   "theme": {
     "light": "Claro",
@@ -57,6 +58,7 @@
     "helpCenter": "Centro de ayuda",
     "community": "Comunidad",
     "reportBug": "Informar error",
+    "history": "Historial",
     "copyright": "© 2024 Convertidor SVG a ICO. Todos los derechos reservados.",
     "privacy": "Política de privacidad",
     "terms": "Términos de servicio",
@@ -322,6 +324,7 @@
       "preview": "Vista previa",
       "newConversion": "Convertir otro archivo",
       "convertAnother": "Convertir otro archivo",
+      "viewHistory": "Ver historial",
       "convertedAt": "Convertido en",
       "fileInfo": "Información del archivo",
       "filename": "Nombre de archivo",
@@ -661,6 +664,31 @@
     "contact": {
       "title": "Información de contacto",
       "content": "Si tienes alguna pregunta sobre estos Términos de Servicio, por favor contáctanos en 0992sunshine@gmail.com. Abordaremos tus preocupaciones pronta y profesionalmente."
+    }
+  },
+  "history": {
+    "title": "Historial de conversiones",
+    "description": "Ver y administrar tus conversiones de ICO pasadas",
+    "loading": "Cargando historial...",
+    "totalConversions": "Conversiones totales",
+    "totalSize": "Tamaño total",
+    "lastConversion": "Última conversión",
+    "recentConversions": "Conversiones recientes",
+    "refresh": "Actualizar",
+    "clearAll": "Borrar todo",
+    "confirmDelete": "¿Estás seguro de que quieres eliminar este elemento?",
+    "confirmClearAll": "¿Estás seguro de que quieres borrar todo el historial? Esta acción no se puede deshacer.",
+    "download": "Descargar",
+    "delete": "Eliminar",
+    "noConversions": "Aún no hay conversiones",
+    "justNow": "Justo ahora",
+    "minutesAgo": "hace {count} minuto",
+    "hoursAgo": "hace {count} hora",
+    "daysAgo": "hace {count} día",
+    "empty": {
+      "title": "Sin historial de conversiones",
+      "description": "Aún no has convertido ningún archivo. Comienza a convertir para ver tu historial aquí.",
+      "startConverting": "Comenzar a convertir"
     }
   }
 }

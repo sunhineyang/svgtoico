@@ -27,7 +27,8 @@
     "features": "Funktionen",
     "guide": "Leitfaden",
     "faq": "FAQ",
-    "sponsor": "Sponsor"
+    "sponsor": "Sponsor",
+    "history": "Verlauf"
   },
   "theme": {
     "light": "Hell",
@@ -59,6 +60,7 @@
     "helpCenter": "Hilfe-Center",
     "community": "Community",
     "reportBug": "Fehler melden",
+    "history": "Verlauf",
     "copyright": "© 2024 SVG zu ICO Konverter. Alle Rechte vorbehalten.",
     "privacy": "Datenschutzerklärung",
     "terms": "Nutzungsbedingungen",
@@ -320,6 +322,7 @@
       "preview": "Vorschau",
       "newConversion": "Weitere Datei konvertieren",
       "convertAnother": "Weitere Datei konvertieren",
+      "viewHistory": "Verlauf anzeigen",
       "convertedAt": "Konvertiert am",
       "fileInfo": "Dateiinformationen",
       "filename": "Dateiname",
@@ -659,6 +662,31 @@
     "contact": {
       "title": "Kontaktinformationen",
       "content": "Wenn Sie Fragen zu diesen Nutzungsbedingungen haben, kontaktieren Sie uns bitte unter 0992sunshine@gmail.com. Wir werden Ihre Anliegen umgehend und professionell bearbeiten."
+    }
+  },
+  "history": {
+    "title": "Konvertierungsverlauf",
+    "description": "Ihre vergangenen ICO Konvertierungen anzeigen und verwalten",
+    "loading": "Verlauf wird geladen...",
+    "totalConversions": "Gesamtkonvertierungen",
+    "totalSize": "Gesamtgröße",
+    "lastConversion": "Letzte Konvertierung",
+    "recentConversions": "Aktuelle Konvertierungen",
+    "refresh": "Aktualisieren",
+    "clearAll": "Alle löschen",
+    "confirmDelete": "Möchten Sie dieses Element wirklich löschen?",
+    "confirmClearAll": "Möchten Sie wirklich den gesamten Verlauf löschen? Diese Aktion kann nicht rückgängig gemacht werden.",
+    "download": "Herunterladen",
+    "delete": "Löschen",
+    "noConversions": "Noch keine Konvertierungen",
+    "justNow": "Gerade eben",
+    "minutesAgo": "vor {count} Minute",
+    "hoursAgo": "vor {count} Stunde",
+    "daysAgo": "vor {count} Tag",
+    "empty": {
+      "title": "Kein Konvertierungsverlauf",
+      "description": "Sie haben noch keine Dateien konvertiert. Beginnen Sie mit dem Konvertieren, um Ihren Verlauf hier zu sehen.",
+      "startConverting": "Konvertierung starten"
     }
   }
 }
