@@ -1,14 +1,14 @@
 "use client";
 
 import React from 'react';
-import { useTranslations } from 'next-intl';
+import { useTranslations, useLocale } from 'next-intl';
 import { ThemeToggle } from '@/components/common/theme-toggle';
 import { LanguageToggle } from '@/components/common/language-toggle';
 import { Button } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
 import { Github, Heart } from 'lucide-react';
 import Image from 'next/image';
-import Link from 'next/link';
+import { Link } from '@/i18n/navigation';
 
 interface HeaderProps {
   className?: string;
@@ -17,13 +17,14 @@ interface HeaderProps {
 export function Header({ className }: HeaderProps) {
   const t = useTranslations('navigation');
   const tAlt = useTranslations('alt');
+  const locale = useLocale();
 
   return (
     <header className={cn("sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60", className)}>
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex h-16 items-center justify-between">
           {/* Logo和标题 */}
-          <div className="flex items-center space-x-3">
+          <Link href="/" className="flex items-center space-x-3 hover:opacity-90 transition-opacity">
             <div className="flex items-center justify-center w-10 h-10 bg-primary/10 rounded-lg overflow-hidden">
               <Image
                 src="/logo.svg"
@@ -42,21 +43,15 @@ export function Header({ className }: HeaderProps) {
                 {t('subtitle')}
               </p>
             </div>
-          </div>
+          </Link>
 
           {/* 导航链接 */}
           <nav className="hidden md:flex items-center space-x-6">
             <a
-              href="#features"
+              href="/#converter"
               className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
             >
-              {t('features')}
-            </a>
-            <a
-              href="#guide"
-              className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
-            >
-              {t('guide')}
+              SVG to ICO
             </a>
             <a
               href="#faq"
@@ -65,10 +60,10 @@ export function Header({ className }: HeaderProps) {
               {t('faq')}
             </a>
             <Link
-              href="/history"
+              href="/svg-ico-guide"
               className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
             >
-              {t('history')}
+              {t('guide')}
             </Link>
           </nav>
 

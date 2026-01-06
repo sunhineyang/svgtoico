@@ -1,8 +1,9 @@
 "use client";
 
 import React from 'react';
-import { useTranslations } from 'next-intl';
+import { useTranslations, useLocale } from 'next-intl';
 import Link from 'next/link';
+import { useRouter } from 'next/navigation';
 import { cn } from '@/lib/utils';
 import { Github, Twitter, Mail, Heart, ExternalLink } from 'lucide-react';
 import Image from 'next/image';
@@ -14,6 +15,8 @@ interface FooterProps {
 export function Footer({ className }: FooterProps) {
   const t = useTranslations('footer');
   const tAlt = useTranslations('alt');
+  const locale = useLocale();
+  const router = useRouter();
   const currentYear = new Date().getFullYear();
 
   const socialLinks = [
@@ -100,18 +103,18 @@ export function Footer({ className }: FooterProps) {
           </div>
 
           <div className="flex items-center space-x-6 text-sm text-muted-foreground">
-            <Link
-              href="/privacy"
+            <button
+              onClick={() => router.push(locale === 'en' ? '/privacy' : `/${locale}/privacy`)}
               className="hover:text-foreground transition-colors"
             >
               {t('legal.privacy')}
-            </Link>
-            <Link
-              href="/terms"
+            </button>
+            <button
+              onClick={() => router.push(locale === 'en' ? '/terms' : `/${locale}/terms`)}
               className="hover:text-foreground transition-colors"
             >
               {t('legal.terms')}
-            </Link>
+            </button>
           </div>
         </div>
       </div>

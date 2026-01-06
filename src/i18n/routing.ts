@@ -16,7 +16,10 @@ export const routing = defineRouting({
   pathnames: {
     // If all locales use the same pathname, a single
     // external path can be provided for all locales
-    '/': '/'
+    '/': '/',
+    '/svg-ico-guide': '/svg-ico-guide',
+    '/privacy': '/privacy',
+    '/terms': '/terms'
   }
 });
 

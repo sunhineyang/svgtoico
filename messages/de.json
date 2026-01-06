@@ -688,5 +688,432 @@
       "description": "Sie haben noch keine Dateien konvertiert. Beginnen Sie mit dem Konvertieren, um Ihren Verlauf hier zu sehen.",
       "startConverting": "Konvertierung starten"
     }
+  },
+  "guidePage": {
+    "title": "SVG zu ICO Leitfaden",
+    "subtitle": "Vollständiger Leitfaden zur SVG und ICO Konvertierung",
+    "controls": {
+      "slide": "Folie",
+      "previous": "Zurück",
+      "next": "Weiter",
+      "play": "Abspielen",
+      "pause": "Pausieren",
+      "fullscreen": "Vollbild",
+      "exitFullscreen": "Vollbild beenden",
+      "viewAll": "Alle anzeigen",
+      "viewSingle": "Einzeln anzeigen",
+      "share": "Teilen",
+      "shareSuccess": "Erfolgreich geteilt!",
+      "linkCopied": "Link in Zwischenablage kopiert!",
+      "copyFailed": "Link konnte nicht kopiert werden"
+    },
+    "slides": {
+      "slide1": {
+        "badge": "Folie 1",
+        "title": "Was ist SVG?",
+        "subtitle": "Skalierbare Vektorgrafiken verstehen",
+        "definition": {
+          "title": "SVG Definition",
+          "content": "SVG (Scalable Vector Graphics) ist ein XML-basiertes Vektorbildformat für zweidimensionale Grafiken mit Unterstützung für Interaktivität und Animation."
+        },
+        "vectorVsRaster": {
+          "title": "Vektor vs Raster",
+          "vector": {
+            "title": "Vektorgrafiken (SVG)",
+            "content": "Mathematische Pfade, die unendlich skalierbar sind ohne Qualitätsverlust"
+          },
+          "raster": {
+            "title": "Rasterbilder (PNG, JPG)",
+            "content": "Pixelbasierte Bilder, die bei Vergrößerung an Qualität verlieren"
+          }
+        },
+        "advantages": {
+          "title": "SVG Vorteile",
+          "items": [
+            "Unendliche Skalierbarkeit ohne Qualitätsverlust",
+            "Kleine Dateigröße für einfache Grafiken",
+            "Mit jedem Texteditor bearbeitbar",
+            "Unterstützung für Interaktivität und Animation",
+            "Perfekt für Logos und Icons"
+          ]
+        },
+        "useCases": {
+          "title": "Häufige Anwendungsfälle",
+          "items": [
+            { "icon": "🎨", "label": "Logos" },
+            { "icon": "📊", "label": "Diagramme" },
+            { "icon": "🖼️", "label": "Icons" },
+            { "icon": "📐", "label": "Skizzen" }
+          ]
+        }
+      },
+      "slide2": {
+        "badge": "Folie 2",
+        "title": "Was ist ICO?",
+        "subtitle": "Icon-Dateiformat verstehen",
+        "formatIntro": {
+          "title": "ICO Format Einführung",
+          "content": "ICO ist ein Dateiformat für Computer Icons in Microsoft Windows. Es enthält ein oder mehrere kleine Bilder in mehreren Größen und Farbtiefen."
+        },
+        "whyNeeded": {
+          "title": "Warum ICO benötigt wird",
+          "items": [
+            "Windows benötigt ICO für Anwendung Icons",
+            "Mehrere Größen in einer Datei für verschiedene Anzeigen",
+            "Essentiell für Website Favicons",
+            "Standardformat für Desktop Verknüpfungen"
+          ]
+        },
+        "fileStructure": {
+          "title": "ICO Dateistruktur",
+          "header": "6-Byte Header identifiziert Dateityp",
+          "directory": "Liste aller Bilder mit Größen- und Farbinformationen",
+          "data": "Tatsächliche Bilddaten für jede Größe"
+        },
+        "useCases": {
+          "title": "ICO Anwendungsfälle",
+          "items": [
+            { "icon": "🌐", "label": "Favicons" },
+            { "icon": "💻", "label": "App Icons" },
+            { "icon": "📁", "label": "Ordner" },
+            { "icon": "🔗", "label": "Verknüpfungen" }
+          ]
+        }
+      },
+      "slide3": {
+        "badge": "Folie 3",
+        "title": "Warum SVG zu ICO konvertieren?",
+        "subtitle": "Die Notwendigkeit der Konvertierung",
+        "compatibility": {
+          "title": "Kompatibilitätsanforderungen",
+          "items": [
+            {
+              "title": "Windows Anwendungen",
+              "content": "Windows benötigt ICO Format für Anwendung Icons und Dateizuordnungen"
+            },
+            {
+              "title": "Webbrowser",
+              "content": "Favicons müssen im ICO Format sein für ordnungsgemäße Browsererkennung"
+            },
+            {
+              "title": "Desktop Integration",
+              "content": "Verknüpfungen und Datei Icons benötigen ICO für ordnungsgemäße Anzeige"
+            }
+          ]
+        },
+        "bestPractices": {
+          "title": "Best Practices",
+          "items": [
+            "Verwenden Sie SVG Quelle für höchste Konvertierungsqualität",
+            "Inklusive mehrerer Größen (16x16, 32x32, 48x48)",
+            "Transparenz beibehalten für bessere Integration",
+            "Icons vor dem Finalisieren bei verschiedenen Größen testen"
+          ]
+        },
+        "technicalRequirements": {
+          "title": "Technische Anforderungen",
+          "sizes": {
+            "title": "Standardgrößen",
+            "items": ["16x16", "32x32", "48x48", "64x64", "128x128", "256x256"]
+          },
+          "colorDepth": {
+            "title": "Farbtiefe",
+            "items": [
+              "32-bit (24-bit RGB + 8-bit Alphakanal)",
+              "24-bit (RGB Farbe)",
+              "8-bit (256 Farben mit Palette)"
+            ]
+          },
+          "optimization": {
+            "title": "Optimierung",
+            "content": "Optimieren Sie die Dateigröße während Sie die visuelle Qualität beibehalten. Verwenden Sie angemessene Kompression für jede Größe."
+          }
+        }
+      },
+      "slide4": {
+        "badge": "Folie 4",
+        "title": "ICO Format Details",
+        "subtitle": "ICO Struktur verstehen",
+        "structure": {
+          "title": "ICO Dateistruktur",
+          "header": {
+            "title": "Datei Header",
+            "content": "Erste 6 Bytes enthalten Dateityp und Anzahl der Bilder"
+          },
+          "directory": {
+            "title": "Bildverzeichnis",
+            "content": "16-Byte Einträge für jedes Bild mit Größen- und Offsetinformationen"
+          },
+          "data": {
+            "title": "Bilddaten",
+            "content": "Tatsächliche Bitmap- oder PNG-Daten für jedes Bild"
+          }
+        },
+        "multiSize": {
+          "title": "Multi-Größe Prinzip",
+          "content": "ICO Dateien können mehrere Bildgrößen in einer einzigen Datei enthalten, was dem System ermöglicht, die angemessene Größe für verschiedene Anzeigekontexte zu wählen."
+        },
+        "comparison": {
+          "title": "ICO vs PNG Vergleich",
+          "format": "Funktion",
+          "ico": "ICO",
+          "png": "PNG",
+          "rows": [
+            {
+              "feature": "Mehrere Größen",
+              "ico": "✓ Ja",
+              "png": "✗ Nein"
+            },
+            {
+              "feature": "Windows Unterstützung",
+              "ico": "✓ Nativ",
+              "png": "✗ Begrenzt"
+            },
+            {
+              "feature": "Transparenz",
+              "ico": "✓ Ja",
+              "png": "✓ Ja"
+            },
+            {
+              "feature": "Dateigröße",
+              "ico": "Größer",
+              "png": "Kleiner"
+            }
+          ]
+        },
+        "advantages": {
+          "title": "ICO Vorteile",
+          "items": [
+            "Einzige Datei enthält mehrere Größen",
+            "Native Windows Unterstützung",
+            "Automatische Größenauswahl durch OS",
+            "Essentiell für Favicons"
+          ]
+        }
+      },
+      "slide5": {
+        "badge": "Folie 5",
+        "title": "Konvertierungsqualitätsvergleich",
+        "subtitle": "Qualitätseinstellungen verstehen",
+        "qualityLevels": {
+          "title": "Qualitätsstufen",
+          "items": [
+            {
+              "title": "Hohe Qualität",
+              "description": "Beste visuelle Qualität mit minimalen Kompressionsartefakten. Empfohlen für professionelle Nutzung.",
+              "size": "Größere Dateigröße"
+            },
+            {
+              "title": "Mittlere Qualität",
+              "description": "Ausgeglichene Qualität und Dateigröße. Gut für allgemeine Nutzung.",
+              "size": "Mäßige Dateigröße"
+            },
+            {
+              "title": "Niedrige Qualität",
+              "description": "Kleinere Dateigröße mit sichtbarer Kompression. Nur für spezifische Anwendungsfälle.",
+              "size": "Kleinste Dateigröße"
+            }
+          ]
+        },
+        "sizeRecommendations": {
+          "title": "Größenempfehlungen",
+          "items": [
+            {
+              "size": "16x16",
+              "title": "Systemleiste",
+              "description": "Kleine UI Elemente und Benachrichtigungs Icons"
+            },
+            {
+              "size": "32x32",
+              "title": "Desktop",
+              "description": "Desktop Verknüpfungen und Datei Icons"
+            },
+            {
+              "size": "48x48",
+              "title": "Standard",
+              "description": "Windows Explorer und Dateimanager"
+            },
+            {
+              "size": "256x256",
+              "title": "High DPI",
+              "description": "Moderne hochauflösende Anzeigen"
+            }
+          ]
+        },
+        "backgroundHandling": {
+          "title": "Hintergrundbehandlung",
+          "items": [
+            {
+              "title": "Transparent",
+              "description": "Am besten für Icons mit unregelmäßigen Formen. Ermöglicht Hintergrunddurchsicht."
+            },
+            {
+              "title": "Weißer Hintergrund",
+              "description": "Gut für hellthemierte Anwendungen. Bietet konsistentes Erscheinungsbild."
+            },
+            {
+              "title": "Schwarzer Hintergrund",
+              "description": "Geeignet für dunkelthemierte Anwendungen. Gewährleistet Sichtbarkeit."
+            }
+          ]
+        },
+        "tips": {
+          "title": "Qualitätstipps",
+          "items": [
+            "Verwenden Sie immer höchste Qualität Quellbild",
+            "Testen Sie Icons bei allen beabsichtigten Größen",
+            "Berücksichtigen Sie Zielumgebung (hell/dunkel Thema)",
+            "Optimieren Sie für Dateigröße ohne Qualität zu opfern"
+          ]
+        }
+      },
+      "slide6": {
+        "badge": "Folie 6",
+        "title": "Anwendungsfälle",
+        "subtitle": "Praktische Anwendungen von ICO Dateien",
+        "favicon": {
+          "title": "Website Favicons",
+          "description": "Favicons sind kleine Icons, die in Browser Tabs, Lesezeichen und Adressleisten erscheinen. Sie helfen Benutzern, Ihre Website zu identifizieren.",
+          "implementation": {
+            "title": "HTML Implementierung",
+            "code": "&lt;link rel=&quot;icon&quot; type=&quot;image/x-icon&quot; href=&quot;/favicon.ico&quot;&gt;"
+          },
+          "bestPractices": {
+            "title": "Best Practices",
+            "items": [
+              "Verwenden Sie 16x16 und 32x32 Größen",
+              "Halten Sie Design einfach und erkennbar",
+              "Testen Sie auf allen gängigen Browsern",
+              "Gewährleisten Sie hohen Kontrast bei kleinen Größen"
+            ]
+          }
+        },
+        "appIcons": {
+          "title": "Anwendung Icons",
+          "items": [
+            {
+              "title": "Windows Desktop Apps",
+              "description": "Hauptanwendung Icon angezeigt in Taskleiste und Desktop"
+            },
+            {
+              "title": "Dateityp Icons",
+              "description": "Icons zugeordnet zu spezifischen Dateitypen"
+            },
+            {
+              "title": "Systemsteuerung",
+              "description": "Icons für Systemeinstellungen und Dienstprogramme"
+            }
+          ]
+        },
+        "mobileApps": {
+          "title": "Mobile Anwendungen",
+          "items": [
+            {
+              "title": "iOS App Icons",
+              "description": "App Store und Startbildschirm Icons",
+              "sizes": ["1024x1024", "180x180", "120x120"]
+            },
+            {
+              "title": "Android App Icons",
+              "description": "Play Store und Launcher Icons",
+              "sizes": ["512x512", "192x192", "144x144"]
+            },
+            {
+              "title": "PWA Icons",
+              "description": "Progressive Web App Icons",
+              "sizes": ["512x512", "192x192", "144x144"]
+            }
+          ]
+        },
+        "desktopShortcuts": {
+          "title": "Desktop Verknüpfungen",
+          "description": "ICO Dateien werden für Desktop Verknüpfungen verwendet, was Benutzern ermöglicht, schnell auf Anwendungen und Dateien zuzugreifen.",
+          "items": [
+            { "icon": "📄", "label": "Dokumente" },
+            { "icon": "🗂️", "label": "Ordner" },
+            { "icon": "⚙️", "label": "Einstellungen" },
+            { "icon": "🔧", "label": "Werkzeuge" }
+          ]
+        }
+      },
+      "slide7": {
+        "badge": "Folie 7",
+        "title": "FAQ",
+        "subtitle": "Häufig gestellte Fragen",
+        "troubleshooting": {
+          "title": "Fehlerbehebung",
+          "items": [
+            {
+              "question": "Warum ist meine ICO Datei verschwommen?",
+              "answer": "Stellen Sie sicher, dass Ihr Quellbild ausreichende Auflösung hat. Verwenden Sie hohe Qualitätseinstellungen während der Konvertierung und inkludieren Sie mehrere Größen."
+            },
+            {
+              "question": "Warum funktioniert Transparenz nicht?",
+              "answer": "Überprüfen Sie, ob Ihr Quellbild Transparenz hat. Verwenden Sie PNG Format mit Alphakanal und stellen Sie sicher, dass Hintergrund auf transparent eingestellt ist."
+            },
+            {
+              "question": "Warum ist Dateigröße zu groß?",
+              "answer": "Reduzieren Sie die Anzahl der inkludierten Größen oder verwenden Sie niedrigere Qualitätseinstellungen. Optimieren Sie Ihr Quellbild vor der Konvertierung."
+            },
+            {
+              "question": "Warum erkennt Windows meine ICO nicht?",
+              "answer": "Stellen Sie sicher, dass ICO Datei dem korrekten Format folgt. Inklusive Standardgrößen (16x16, 32x32, 48x48) und ordnungsgemäße Farbtiefe."
+            }
+          ]
+        },
+        "optimization": {
+          "title": "Optimierungstipps",
+          "items": [
+            {
+              "title": "Komplexe Designs vereinfachen",
+              "description": "Reduzieren Sie die Anzahl der Farben und Details für bessere Leistung bei kleinen Größen."
+            },
+            {
+              "title": "Angemessene Größen verwenden",
+              "description": "Inklusive nur der Größen, die Sie benötigen. Häufige Größen sind 16x16, 32x32 und 48x48."
+            },
+            {
+              "title": "Gründlich testen",
+              "description": "Testen Sie Ihre Icons in verschiedenen Kontexten und Größen vor dem Finalisieren."
+            }
+          ]
+        },
+        "commonQuestions": {
+          "title": "Häufige Fragen",
+          "items": [
+            {
+              "question": "Kann ich SVG direkt als Favicon verwenden?",
+              "answer": "Einige moderne Browser unterstützen SVG Favicons, aber ICO ist immer noch das kompatibelste Format für alle Browser und Plattformen."
+            },
+            {
+              "question": "Was ist die maximale ICO Dateigröße?",
+              "answer": "Es gibt keine strikte Begrenzung, aber für praktische Zwecke, halten Sie ICO Dateien unter 1MB für beste Leistung."
+            },
+            {
+              "question": "Kann ich animierte SVG zu ICO konvertieren?",
+              "answer": "Standard ICO Format unterstützt keine Animation. Animierte SVGs werden zu statischen Bildern konvertiert."
+            },
+            {
+              "question": "Wie viele Größen sollte ich inkludieren?",
+              "answer": "Für allgemeine Nutzung, inkludieren Sie 16x16, 32x32 und 48x48. Für High-DPI Anzeigen, inkludieren Sie auch 256x256."
+            }
+          ]
+        },
+        "quickTips": {
+          "title": "Schnelle Tipps",
+          "items": [
+            "Verwenden Sie SVG Quelle für beste Qualität",
+            "Inklusive mehrerer Größen für Kompatibilität",
+            "Testen Sie Icons bei allen Größen",
+            "Halten Sie Designs einfach und erkennbar"
+          ]
+        },
+        "needHelp": {
+          "title": "Benötigen Sie mehr Hilfe?",
+          "description": "Wenn Sie weitere Fragen haben oder Unterstützung benötigen, besuchen Sie unser Hauptkonvertierungstool.",
+          "cta": "Zum Konverter gehen"
+        }
+      }
+    }
   }
 }

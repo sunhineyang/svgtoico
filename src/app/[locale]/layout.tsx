@@ -3,6 +3,7 @@ import { NextIntlClientProvider } from 'next-intl';
 import { getMessages } from 'next-intl/server';
 import { notFound } from 'next/navigation';
 import { routing } from '@/i18n/routing';
+import { getAlternates } from '@/lib/seo';
 
 // 动态生成metadata函数
 export async function generateMetadata({
@@ -11,11 +12,6 @@ export async function generateMetadata({
   params: Promise<{ locale: string }>;
 }): Promise<Metadata> {
   const { locale } = await params;
-  
-  // 根据语言生成正确的canonical URL
-  const canonicalUrl = locale === 'en' 
-    ? 'https://svgtoico.org'
-    : `https://svgtoico.org/${locale}`;
   
   return {
     title: "SVG to ICO Converter | PNG to ICO | JPG to ICO - Free Online Tool",
@@ -26,15 +22,7 @@ export async function generateMetadata({
       apple: '/logo.svg',
       shortcut: '/logo.svg',
     },
-    alternates: {
-      canonical: canonicalUrl,
-      languages: {
-        'en': 'https://svgtoico.org',
-        'ru': 'https://svgtoico.org/ru',
-        'ko': 'https://svgtoico.org/ko',
-        'ja': 'https://svgtoico.org/ja',
-      },
-    },
+    alternates: getAlternates(locale, ''),
   };
 }
 

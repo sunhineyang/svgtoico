@@ -584,5 +584,432 @@
       "description": "아직 파일을 변환하지 않았습니다. 변환을 시작하면 여기에 기록이 표시됩니다.",
       "startConverting": "변환 시작"
     }
+  },
+  "guidePage": {
+    "title": "SVG에서 ICO 가이드",
+    "subtitle": "SVG에서 ICO 변환의 완전한 가이드",
+    "controls": {
+      "slide": "슬라이드",
+      "previous": "이전",
+      "next": "다음",
+      "play": "재생",
+      "pause": "일시정지",
+      "fullscreen": "전체화면",
+      "exitFullscreen": "전체화면 종료",
+      "viewAll": "모두 보기",
+      "viewSingle": "단일 보기",
+      "share": "공유",
+      "shareSuccess": "성공적으로 공유되었습니다!",
+      "linkCopied": "링크가 클립보드에 복사되었습니다!",
+      "copyFailed": "링크 복사 실패"
+    },
+    "slides": {
+      "slide1": {
+        "badge": "슬라이드 1",
+        "title": "SVG란 무엇인가요?",
+        "subtitle": "확장 가능한 벡터 그래픽 이해하기",
+        "definition": {
+          "title": "SVG 정의",
+          "content": "SVG(Scalable Vector Graphics)는 상호작용 및 애니메이션을 지원하는 2차원 그래픽용 XML 기반 벡터 이미지 형식입니다."
+        },
+        "vectorVsRaster": {
+          "title": "벡터 vs 래스터",
+          "vector": {
+            "title": "벡터 그래픽(SVG)",
+            "content": "품질 손실 없이 무한히 확장 가능한 수학적 경로"
+          },
+          "raster": {
+            "title": "래스터 이미지(PNG, JPG)",
+            "content": "확대 시 품질이 저하되는 픽셀 기반 이미지"
+          }
+        },
+        "advantages": {
+          "title": "SVG 장점",
+          "items": [
+            "품질 손실 없이 무한 확장 가능",
+            "단순한 그래픽용 작은 파일 크기",
+            "모든 텍스트 편집기로 편집 가능",
+            "상호작용 및 애니메이션 지원",
+            "로고 및 아이콘에 완벽"
+          ]
+        },
+        "useCases": {
+          "title": "일반적인 사용 사례",
+          "items": [
+            { "icon": "🎨", "label": "로고" },
+            { "icon": "📊", "label": "차트" },
+            { "icon": "🖼️", "label": "아이콘" },
+            { "icon": "📐", "label": "다이어그램" }
+          ]
+        }
+      },
+      "slide2": {
+        "badge": "슬라이드 2",
+        "title": "ICO란 무엇인가요?",
+        "subtitle": "아이콘 파일 형식 이해하기",
+        "formatIntro": {
+          "title": "ICO 형식 소개",
+          "content": "ICO는 Microsoft Windows의 컴퓨터 아이콘용 파일 형식입니다. 여러 크기와 색상 깊이의 작은 이미지를 하나 이상 포함합니다."
+        },
+        "whyNeeded": {
+          "title": "ICO가 필요한 이유",
+          "items": [
+            "Windows는 애플리케이션 아이콘에 ICO가 필요",
+            "다른 디스플레이용 하나의 파일에 여러 크기",
+            "웹사이트 파비콘에 필수적",
+            "데스크톱 바로가기의 표준 형식"
+          ]
+        },
+        "fileStructure": {
+          "title": "ICO 파일 구조",
+          "header": "파일 유형을 식별하는 6바이트 헤더",
+          "directory": "크기 및 색상 정보가 있는 모든 이미지 목록",
+          "data": "각 크기의 실제 이미지 데이터"
+        },
+        "useCases": {
+          "title": "ICO 사용 사례",
+          "items": [
+            { "icon": "🌐", "label": "파비콘" },
+            { "icon": "💻", "label": "앱 아이콘" },
+            { "icon": "📁", "label": "폴더" },
+            { "icon": "🔗", "label": "바로가기" }
+          ]
+        }
+      },
+      "slide3": {
+        "badge": "슬라이드 3",
+        "title": "왜 SVG를 ICO로 변환하나요?",
+        "subtitle": "변환의 필요성",
+        "compatibility": {
+          "title": "호환성 요구사항",
+          "items": [
+            {
+              "title": "Windows 애플리케이션",
+              "content": "Windows는 애플리케이션 아이콘 및 파일 연결에 ICO 형식이 필요"
+            },
+            {
+              "title": "웹 브라우저",
+              "content": "파비콘은 적절한 브라우저 인식을 위해 ICO 형식이어야 합니다"
+            },
+            {
+              "title": "데스크톱 통합",
+              "content": "바로가기 및 파일 아이콘은 적절한 표시를 위해 ICO가 필요"
+            }
+          ]
+        },
+        "bestPractices": {
+          "title": "모벨 사례",
+          "items": [
+            "최고 품질 변환을 위해 SVG 소스 사용",
+            "여러 크기 포함(16x16, 32x32, 48x48)",
+            "더 나은 통합을 위해 투명도 유지",
+            "완료 전에 다양한 크기로 아이콘 테스트"
+          ]
+        },
+        "technicalRequirements": {
+          "title": "기술적 요구사항",
+          "sizes": {
+            "title": "표준 크기",
+            "items": ["16x16", "32x32", "48x48", "64x64", "128x128", "256x256"]
+          },
+          "colorDepth": {
+            "title": "색상 깊이",
+            "items": [
+              "32비트(24비트 RGB + 8비트 알파 채널)",
+              "24비트(RGB 색상)",
+              "8비트(팔레트로 256색상)"
+            ]
+          },
+          "optimization": {
+            "title": "최적화",
+            "content": "시각적 품질을 유지하면서 파일 크기를 최적화하세요. 각 크기에 적절한 압축을 사용하세요."
+          }
+        }
+      },
+      "slide4": {
+        "badge": "슬라이드 4",
+        "title": "ICO 파일 형식 상세",
+        "subtitle": "ICO 구조 이해하기",
+        "structure": {
+          "title": "ICO 파일 구조",
+          "header": {
+            "title": "파일 헤더",
+            "content": "처음 6바이트에 파일 유형 및 이미지 수 포함"
+          },
+          "directory": {
+            "title": "이미지 디렉토리",
+            "content": "크기 및 오프셋 정보가 있는 각 이미지의 16바이트 항목"
+          },
+          "data": {
+            "title": "이미지 데이터",
+            "content": "각 이미지의 실제 비트맵 또는 PNG 데이터"
+          }
+        },
+        "multiSize": {
+          "title": "다중 크기 원리",
+          "content": "ICO 파일은 단일 파일에 여러 이미지 크기를 포함할 수 있어, 시스템이 다른 표시 컨텍스트에 적절한 크기를 선택할 수 있게 합니다."
+        },
+        "comparison": {
+          "title": "ICO vs PNG 비교",
+          "format": "기능",
+          "ico": "ICO",
+          "png": "PNG",
+          "rows": [
+            {
+              "feature": "여러 크기",
+              "ico": "✓ 예",
+              "png": "✗ 아니오"
+            },
+            {
+              "feature": "Windows 지원",
+              "ico": "✓ 네이티브",
+              "png": "✗ 제한적"
+            },
+            {
+              "feature": "투명도",
+              "ico": "✓ 예",
+              "png": "✓ 예"
+            },
+            {
+              "feature": "파일 크기",
+              "ico": "더 큼",
+              "png": "더 작음"
+            }
+          ]
+        },
+        "advantages": {
+          "title": "ICO 장점",
+          "items": [
+            "단일 파일에 여러 크기 포함",
+            "네이티브 Windows 지원",
+            "OS에 의한 자동 크기 선택",
+            "파비콘에 필수적"
+          ]
+        }
+      },
+      "slide5": {
+        "badge": "슬라이드 5",
+        "title": "변환 품질 비교",
+        "subtitle": "품질 설정 이해하기",
+        "qualityLevels": {
+          "title": "품질 수준",
+          "items": [
+            {
+              "title": "높은 품질",
+              "description": "최소한 압축 아티팩트로 최고의 시각적 품질. 전문적인 사용에 권장됩니다.",
+              "size": "더 큰 파일 크기"
+            },
+            {
+              "title": "중간 품질",
+              "description": "균형 잡힌 품질과 파일 크기. 일반적인 사용에 좋습니다.",
+              "size": "중간 파일 크기"
+            },
+            {
+              "title": "낮은 품질",
+              "description": "가시적인 압축으로 더 작은 파일 크기. 특정 사용 사례에만 적합합니다.",
+              "size": "가장 작은 파일 크기"
+            }
+          ]
+        },
+        "sizeRecommendations": {
+          "title": "크기 권장사항",
+          "items": [
+            {
+              "size": "16x16",
+              "title": "시스템 트레이",
+              "description": "작은 UI 요소 및 알림 아이콘"
+            },
+            {
+              "size": "32x32",
+              "title": "데스크톱",
+              "description": "데스크톱 바로가기 및 파일 아이콘"
+            },
+            {
+              "size": "48x48",
+              "title": "표준",
+              "description": "Windows 탐색기 및 파일 관리자"
+            },
+            {
+              "size": "256x256",
+              "title": "높은 DPI",
+              "description": "현대 고해상도 디스플레이"
+            }
+          ]
+        },
+        "backgroundHandling": {
+          "title": "배경 처리",
+          "items": [
+            {
+              "title": "투명",
+              "description": "불규칙한 모양의 아이콘에 가장 적합합니다. 배경이 비치게 보이게 합니다."
+            },
+            {
+              "title": "흰색 배경",
+              "description": "밝은 테마 애플리케이션에 적합합니다. 일관된 모양을 제공합니다."
+            },
+            {
+              "title": "검은색 배경",
+              "description": "어두운 테마 애플리케이션에 적합합니다. 가시성을 보장합니다."
+            }
+          ]
+        },
+        "tips": {
+          "title": "품질 팁",
+          "items": [
+            "항상 최고 품질의 소스 이미지 사용",
+            "의도된 모든 크기로 아이콘 테스트",
+            "대상 환경(밝은/어두운 테마) 고려",
+            "품질을 희생하지 않고 파일 크기 최적화"
+          ]
+        }
+      },
+      "slide6": {
+        "badge": "슬라이드 6",
+        "title": "사용 사례",
+        "subtitle": "ICO 파일의 실용적인 애플리케이션",
+        "favicon": {
+          "title": "웹사이트 파비콘",
+          "description": "파비콘은 브라우저 탭, 북마크 및 주소 표시줄에 나타나는 작은 아이콘입니다. 사용자가 웹사이트를 식별하는 데 도움이 됩니다.",
+          "implementation": {
+            "title": "HTML 구현",
+            "code": "&lt;link rel=&quot;icon&quot; type=&quot;image/x-icon&quot; href=&quot;/favicon.ico&quot;&gt;"
+          },
+          "bestPractices": {
+            "title": "모벨 사례",
+            "items": [
+              "16x16 및 32x32 크기 사용",
+              "디자인을 단순하고 인식 가능하게 유지",
+              "모든 주요 브라우저에서 테스트",
+              "작은 크기에서 높은 대비 확보"
+            ]
+          }
+        },
+        "appIcons": {
+          "title": "애플리케이션 아이콘",
+          "items": [
+            {
+              "title": "Windows 데스크톱 앱",
+              "description": "작업 표시줄 및 데스크톱에 표시되는 주요 애플리케이션 아이콘"
+            },
+            {
+              "title": "파일 유형 아이콘",
+              "description": "특정 파일 유형과 연결된 아이콘"
+            },
+            {
+              "title": "제어판",
+              "description": "시스템 설정 및 유틸리티용 아이콘"
+            }
+          ]
+        },
+        "mobileApps": {
+          "title": "모바일 애플리케이션",
+          "items": [
+            {
+              "title": "iOS 앱 아이콘",
+              "description": "App Store 및 홈 화면 아이콘",
+              "sizes": ["1024x1024", "180x180", "120x120"]
+            },
+            {
+              "title": "Android 앱 아이콘",
+              "description": "Play Store 및 런처 아이콘",
+              "sizes": ["512x512", "192x192", "144x144"]
+            },
+            {
+              "title": "PWA 아이콘",
+              "description": "프로그레시브 웹 앱 아이콘",
+              "sizes": ["512x512", "192x192", "144x144"]
+            }
+          ]
+        },
+        "desktopShortcuts": {
+          "title": "데스크톱 바로가기",
+          "description": "ICO 파일은 데스크톱 바로가기에 사용되어, 사용자가 애플리케이션 및 파일에 빠르게 액세스할 수 있게 합니다.",
+          "items": [
+            { "icon": "📄", "label": "문서" },
+            { "icon": "🗂️", "label": "폴더" },
+            { "icon": "⚙️", "label": "설정" },
+            { "icon": "🔧", "label": "도구" }
+          ]
+        }
+      },
+      "slide7": {
+        "badge": "슬라이드 7",
+        "title": "FAQ",
+        "subtitle": "자주 묻는 질문",
+        "troubleshooting": {
+          "title": "문제 해결",
+          "items": [
+            {
+              "question": "왜 내 ICO 파일이 흐릿한가요?",
+              "answer": "소스 이미지에 충분한 해상도가 있는지 확인하세요. 변환 중에 높은 품질 설정을 사용하고 여러 크기를 포함하세요."
+            },
+            {
+              "question": "왜 투명도가 작동하지 않나요?",
+              "answer": "소스 이미지에 투명도가 있는지 확인하세요. 알파 채널이 있는 PNG 형식을 사용하고 배경이 투명으로 설정되어 있는지 확인하세요."
+            },
+            {
+              "question": "왜 파일 크기가 너무 큰가요?",
+              "answer": "포함된 크기 수를 줄이거나 낮은 품질 설정을 사용하세요. 변환 전에 소스 이미지를 최적화하세요."
+            },
+            {
+              "question": "왜 Windows가 내 ICO를 인식하지 못하나요?",
+              "answer": "ICO 파일이 올바른 형식을 따르는지 확인하세요. 표준 크기(16x16, 32x32, 48x48)와 적절한 색상 깊이를 포함하세요."
+            }
+          ]
+        },
+        "optimization": {
+          "title": "최적화 팁",
+          "items": [
+            {
+              "title": "복잡한 디자인 단순화",
+              "description": "작은 크기에서 더 나은 성능을 위해 색상 및 세부 사항 수를 줄이세요."
+            },
+            {
+              "title": "적절한 크기 사용",
+              "description": "필요한 크기만 포함하세요. 일반적인 크기는 16x16, 32x32, 48x48입니다."
+            },
+            {
+              "title": "철저히 테스트",
+              "description": "완료 전에 다양한 컨텍스트와 크기로 아이콘을 테스트하세요."
+            }
+          ]
+        },
+        "commonQuestions": {
+          "title": "일반적인 질문",
+          "items": [
+            {
+              "question": "SVG를 직접 파비콘으로 사용할 수 있나요?",
+              "answer": "일부 현대 브라우저는 SVG 파비콘을 지원하지만, ICO는 여전히 모든 브라우저 및 플랫폼에서 가장 호환성 있는 형식입니다."
+            },
+            {
+              "question": "ICO 파일의 최대 크기는 무엇인가요?",
+              "answer": "엄격한 제한은 없지만 실용적인 목적을 위해 최고의 성능을 위해 ICO 파일을 1MB 미만으로 유지하는 것이 좋습니다."
+            },
+            {
+              "question": "애니메이션 SVG를 ICO로 변환할 수 있나요?",
+              "answer": "표준 ICO 형식은 애니메이션을 지원하지 않습니다. 애니메이션 SVG는 정지 이미지로 변환됩니다."
+            },
+            {
+              "question": "몇 개의 크기를 포함해야 하나요?",
+              "answer": "일반적인 사용에는 16x16, 32x32, 48x48를 포함하세요. 고 DPI 디스플레이의 경우 256x256도 포함하세요."
+            }
+          ]
+        },
+        "quickTips": {
+          "title": "빠른 팁",
+          "items": [
+            "최고 품질을 위해 SVG 소스 사용",
+            "호환성을 위해 여러 크기 포함",
+            "모든 크기로 아이콘 테스트",
+            "디자인을 단순하고 인식 가능하게 유지"
+          ]
+        },
+        "needHelp": {
+          "title": "더 많은 도움이 필요하신가요?",
+          "description": "더 많은 질문이 있거나 지원이 필요한 경우 메인 변환 도구를 방문하세요.",
+          "cta": "변환기로 이동"
+        }
+      }
+    }
   }
 }

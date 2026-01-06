@@ -1,5 +1,6 @@
 import { HomeContent } from '@/components/pages/home-content';
 import { Metadata } from 'next';
+import { getAlternates } from '@/lib/seo';
 
 type Props = {
   params: Promise<{ locale: string }>;
@@ -7,23 +8,12 @@ type Props = {
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params;
-  const canonicalUrl = locale === 'en' 
-    ? 'https://svgtoico.org'
-    : `https://svgtoico.org/${locale}`;
 
   return {
     title: 'SVG to ICO Converter - Free Online Tool',
     description: 'Convert SVG files to ICO format online for free. High-quality conversion with multiple sizes and customizable settings.',
     keywords: 'SVG to ICO, favicon converter, icon converter, online tool',
-    alternates: {
-      canonical: canonicalUrl,
-      languages: {
-        'en': 'https://svgtoico.org',
-        'ko': 'https://svgtoico.org/ko',
-        'ja': 'https://svgtoico.org/ja',
-        'ru': 'https://svgtoico.org/ru',
-      },
-    },
+    alternates: getAlternates(locale, ''),
   };
 }
 
