@@ -10,7 +10,6 @@ interface PopunderAdProps {
 
 export default function PopunderAd({ shouldShow, onShow, onError }: PopunderAdProps) {
   const [hasShown, setHasShown] = useState(false);
-  const [isLoading, setIsLoading] = useState(false);
 
   useEffect(() => {
     // 检查用户是否禁用了广告
@@ -28,58 +27,32 @@ export default function PopunderAd({ shouldShow, onShow, onError }: PopunderAdPr
       return;
     }
 
-    // 检查是否在移动设备上（移动设备体验较差，暂不展示）
-    const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
-    if (isMobile) {
-      return;
-    }
-
-    if (shouldShow && !hasShown && !isLoading) {
-      setIsLoading(true);
-      
+    // 如果触发了展示逻辑
+    if (shouldShow && !hasShown) {
       try {
-        // 延迟加载广告脚本，避免影响页面性能
-        const script = document.createElement('script');
-        script.type = 'text/javascript';
-        script.src = '//pl27845680.effectivegatecpm.com/fe/94/06/fe94064d80d74690b289cde23b4fe784.js';
-        script.async = true;
+        // 记录展示时间
+        localStorage.setItem('popunder_last_shown', today);
+        setHasShown(true);
+        onShow?.();
         
-        // 添加错误处理
-        script.onerror = () => {
-          const error = new Error('Failed to load Adsterra popunder script');
-          onError?.(error);
-          setIsLoading(false);
-        };
-
-        script.onload = () => {
-          // 记录展示时间
-          localStorage.setItem('popunder_last_shown', today);
-          setHasShown(true);
-          setIsLoading(false);
-          onShow?.();
-          
-          // 记录广告展示统计
-          const adStats = JSON.parse(localStorage.getItem('popunder_stats') || '{"shows": 0, "lastMonth": ""}');
-          const currentMonth = new Date().toISOString().slice(0, 7); // YYYY-MM
-          
-          if (adStats.lastMonth !== currentMonth) {
-            adStats.shows = 1;
-            adStats.lastMonth = currentMonth;
-          } else {
-            adStats.shows += 1;
-          }
-          
-          localStorage.setItem('popunder_stats', JSON.stringify(adStats));
-        };
+        // 记录广告展示统计
+        const adStats = JSON.parse(localStorage.getItem('popunder_stats') || '{"shows": 0, "lastMonth": ""}');
+        const currentMonth = new Date().toISOString().slice(0, 7); // YYYY-MM
         
-        document.head.appendChild(script);
+        if (adStats.lastMonth !== currentMonth) {
+          adStats.shows = 1;
+          adStats.lastMonth = currentMonth;
+        } else {
+          adStats.shows += 1;
+        }
+        
+        localStorage.setItem('popunder_stats', JSON.stringify(adStats));
         
       } catch (error) {
         onError?.(error as Error);
-        setIsLoading(false);
       }
     }
-  }, [shouldShow, hasShown, isLoading, onShow, onError]);
+  }, [shouldShow, hasShown, onShow, onError]);
 
   // 不渲染任何可见内容
   return null;
@@ -110,5 +83,22 @@ export const AdPreferences = {
   // 重置今日展示记录（用于测试）
   resetTodayShow: () => {
     localStorage.removeItem('popunder_last_shown');
+  },
+  
+  // 记录广告展示
+  recordShow: () => {
+    const today = new Date().toDateString();
+    localStorage.setItem('popunder_last_shown', today);
+    
+    const adStats = JSON.parse(localStorage.getItem('popunder_stats') || '{"shows": 0, "lastMonth": ""}');
+    const currentMonth = new Date().toISOString().slice(0, 7);
+    
+    if (adStats.lastMonth !== currentMonth) {
+      adStats.shows = 1;
+      adStats.lastMonth = currentMonth;
+    } else {
+      adStats.shows += 1;
+    }
+    localStorage.setItem('popunder_stats', JSON.stringify(adStats));
   }
 };

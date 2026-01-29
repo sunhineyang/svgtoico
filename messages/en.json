@@ -339,11 +339,13 @@
         "tip3": "Use transparent backgrounds for better integration with various themes"
       }
     },
-    "error": {
+    "errors": {
       "title": "Conversion Failed",
       "subtitle": "An error occurred during conversion",
       "retry": "Try Again",
-      "selectNew": "Select New File"
+      "selectNew": "Select New File",
+      "noFile": "Please select a file first",
+      "conversionFailed": "Conversion failed. Please try again."
     },
     "common": {
       "invalidFile": "Invalid file format",

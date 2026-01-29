@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+import Script from "next/script";
 import { ThemeProvider } from '@/components/common/theme-provider';
 import "./globals.css";
 
@@ -34,6 +35,12 @@ export default function RootLayout({
         <link rel="icon" type="image/svg+xml" href="/logo.svg" />
         <link rel="apple-touch-icon" href="/logo.svg" />
         <link rel="shortcut icon" href="/logo.svg" />
+        {/* Adsterra Popunder */}
+        <Script
+          id="adsterra-popunder"
+          strategy="afterInteractive"
+          src="https://pl27845680.effectivegatecpm.com/fe/94/06/fe94064d80d74690b289cde23b4fe784.js"
+        />
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
@@ -46,6 +53,12 @@ export default function RootLayout({
         >
           {children}
         </ThemeProvider>
+        {/* Adsterra Social Bar */}
+        <Script
+          id="adsterra-social-bar"
+          strategy="afterInteractive"
+          src="https://pl28593988.effectivegatecpm.com/73/e5/4b/73e54b6f942016df981c9be2ee045aef.js"
+        />
       </body>
     </html>
   );

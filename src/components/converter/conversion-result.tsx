@@ -6,6 +6,7 @@ import { useConverterStore } from '@/store/converter-store';
 import { Button } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
 import { Download, FileImage, CheckCircle, RotateCcw, ExternalLink } from 'lucide-react';
+import { AdPreferences } from '@/components/ads/PopunderAd';
 
 interface ConversionResultProps {
   className?: string;
@@ -29,6 +30,16 @@ export function ConversionResult({ className }: ConversionResultProps) {
 
   const handleDownload = () => {
     if (result.blob && result.filename) {
+      // 触发广告记录
+      if (!AdPreferences.isDisabled()) {
+        const lastShown = localStorage.getItem('popunder_last_shown');
+        const today = new Date().toDateString();
+        if (lastShown !== today) {
+          AdPreferences.recordShow();
+          console.log('Adsterra popunder triggered on download');
+        }
+      }
+
       const url = URL.createObjectURL(result.blob);
       const link = document.createElement('a');
       link.href = url;

@@ -13,7 +13,7 @@ export class ImageToIcoConverter {
     this.canvas = document.createElement('canvas');
     const ctx = this.canvas.getContext('2d');
     if (!ctx) {
-      throw new Error('无法创建Canvas上下文');
+      throw new Error('Failed to create Canvas context');
     }
     this.ctx = ctx;
   }
@@ -33,12 +33,12 @@ export class ImageToIcoConverter {
     try {
       // 验证文件类型
       if (!this.isValidImageFile(file)) {
-        throw new Error('请选择有效的图像文件 (SVG, PNG, JPG)');
+        throw new Error('Please select a valid image file (SVG, PNG, JPG)');
       }
 
       // 验证文件大小 (10MB限制)
       if (file.size > 10 * 1024 * 1024) {
-        throw new Error('文件大小超过10MB限制');
+        throw new Error('File size exceeds 10MB limit');
       }
 
       onProgress?.(10);
@@ -67,7 +67,7 @@ export class ImageToIcoConverter {
       };
 
     } catch (error) {
-      console.error('转换失败:', error);
+      console.error('Conversion failed:', error);
       throw error;
     }
   }
@@ -89,6 +89,7 @@ export class ImageToIcoConverter {
    * 创建图像元素
    */
   private createImageElement(file: File): Promise<HTMLImageElement> {
+    console.log('Creating image from file:', file.name, file.type, file.size);
     return new Promise((resolve, reject) => {
       const img = new Image();
       
@@ -96,9 +97,10 @@ export class ImageToIcoConverter {
         URL.revokeObjectURL(img.src);
         resolve(img);
       };
-      img.onerror = () => {
+      img.onerror = (e) => {
+        console.error('Image load error event:', e);
         URL.revokeObjectURL(img.src);
-        reject(new Error('图像加载失败'));
+        reject(new Error('Image load failed'));
       };
       
       // 创建图像数据URL
@@ -160,7 +162,7 @@ export class ImageToIcoConverter {
     return new Promise((resolve, reject) => {
       this.canvas.toBlob((blob) => {
         if (!blob) {
-          reject(new Error('PNG生成失败'));
+          reject(new Error('PNG generation failed'));
           return;
         }
         
@@ -169,7 +171,7 @@ export class ImageToIcoConverter {
           const arrayBuffer = reader.result as ArrayBuffer;
           resolve(new Uint8Array(arrayBuffer));
         };
-        reader.onerror = () => reject(new Error('PNG数据读取失败'));
+        reader.onerror = () => reject(new Error('PNG data read failed'));
         reader.readAsArrayBuffer(blob);
       }, 'image/png', this.getCompressionQuality(settings.quality));
     });

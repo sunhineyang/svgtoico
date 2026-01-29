@@ -13,49 +13,12 @@ import {
   AccordionTrigger,
 } from '@/components/ui/accordion';
 import { FileImage, Zap, Shield, Download, Star, Users, Clock, HelpCircle, Upload, Settings, ArrowRight } from 'lucide-react';
-import PopunderAd from '@/components/ads/PopunderAd';
-import { usePopunderTrigger } from '@/hooks/usePopunderTrigger';
 import { useConverterStore } from '@/store/converter-store';
 
 export function HomeContent() {
   const t = useTranslations();
   const locale = useLocale();
   
-  // 获取转换器状态
-  const { status, result } = useConverterStore();
-  
-  // 初始化 Popunder 广告触发器
-  const {
-    shouldShow,
-    startStayTimer,
-    triggerAd,
-    onAdShown,
-    onAdError,
-    cleanup
-  } = usePopunderTrigger({
-    delay: 3000, // 转换成功后3秒展示广告
-    onlyOnSuccess: true, // 只在成功转换后展示
-    minStayTime: 15000 // 用户需要停留15秒以上
-  });
-
-  // 页面加载时开始计算停留时间
-  useEffect(() => {
-    startStayTimer();
-    
-    // 页面卸载时清理
-    return () => {
-      cleanup();
-    };
-  }, [startStayTimer, cleanup]);
-
-  // 监听转换状态变化，在成功时触发广告
-  useEffect(() => {
-    if (status === 'success' && result) {
-      // 转换成功，触发广告
-      triggerAd(true);
-    }
-  }, [status, result, triggerAd]);
-
   return (
     <div className="min-h-screen flex flex-col">
       <Header />
@@ -479,13 +442,6 @@ export function HomeContent() {
       </main>
 
       <Footer />
-      
-      {/* Popunder 广告组件 */}
-      <PopunderAd 
-        shouldShow={shouldShow}
-        onShow={onAdShown}
-        onError={onAdError}
-      />
     </div>
   );
 }
